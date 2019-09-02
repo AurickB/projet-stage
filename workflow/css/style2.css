@@ -4,7 +4,7 @@
 .accordionWrapper{
     display: flex;
     flex-wrap: wrap;
-    padding:30px;
+    padding-top:30px;
     /* background:#fff; */
     box-sizing:border-box;   
     /* box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2); */
@@ -44,7 +44,6 @@
 .close .accordionItemContent{
     height:0px;
 	transform: scaleY(0);
-    float:left;
     display:block;
 
 }
@@ -52,7 +51,6 @@
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
-    width: 100%;
     margin: 0px 0px 10px 0px;
     display:block;
 	transform: scaleY(1);
@@ -71,24 +69,15 @@
     color: #7f8c8d;
 }
 
-img{
-    display: block;
-    height: 100%;
-    width: 100%;
-}
+/* Main */
 
-@media screen and (max-width: 540px){
-    .img-home{
-        height: 100%;
-    }
-}
-
+main section:nth-child(2),
 main section:nth-child(3),
 main section:nth-child(4),
 main section:nth-child(5),
-main section:nth-child(6),
-main section:nth-child(7){
-    padding-top: 100px
+main section:nth-child(6){
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 main section:nth-child(3),
@@ -97,9 +86,69 @@ main section:nth-child(7){
     background-color: #f2f2f2;
 }
 
+/* Main intro */
+
+#intro {
+    background-image: url("../view/images/waitingroom.jpg");
+    background-size: cover;
+    background-position: bottom;
+    height: 500px;
+    width: 100%;
+}
+
+#intro img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#intro .content-wrapper{
+    margin: 0;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    top: 20%;
+}
+
+
+@media screen and (max-width: 540px){
+    #intro p{
+        width: 100%;
+    }
+}
+
 /* Section ostéopathe */
 
-.center-position{
-    margin: auto;
+#osteopathe .content-wrapper{
+    margin: 0 10%;
+}
+
+#osteopathe img{
+    width: 20%;
+}
+
+#osteopathe h2{
+    padding-bottom: 10px;
+}
+
+#osteopathe .presentation-full-site{
+    padding : 40px 0;
+}
+
+#osteopathe .presentation-responsive{
+    display: none;
+}
+
+@media screen and (max-width: 540px){
+    #osteopathe .presentation-full-site{
+        display: none;
+    }
+    #osteopathe .presentation-responsive{
+        display: block;
+    }
+}
+
+#osteopathe button:nth-child(1){
+    margin-bottom: 20px;
 }
 

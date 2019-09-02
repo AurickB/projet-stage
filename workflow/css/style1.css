@@ -20,6 +20,30 @@ li{
     list-style-type: none;
 }
 
+a{
+    text-decoration: none;
+}
+
+button{
+    border-radius: 10px;
+    width: 200px;
+    height: 25px;;
+}
+
+.align-bloc-center{
+    margin: 0 auto;
+    display: block;
+}
+
+.align-texte-center{
+    text-align: center;
+}
+
+.contact-position{
+    padding-top: 80px;
+}
+
+
 /* header */
 
 .navbar{
@@ -157,7 +181,7 @@ li{
         padding: 3%;
         color: white;
     }
-    .navbar .content .is-opened {
+    .navbar .content.is-opened {
         transform: translateY(0);
     }
 }
