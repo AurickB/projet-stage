@@ -24,6 +24,8 @@ function displayScrollMenu() {
   // On parcours tous les titres.
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
+      // On crée une variable qui renvoie la valeur du noeud parent.
+      let itemClass = this.parentNode.className;
       /**
        * Au click sur le titre d'un élément accordéon,
        * On réduit tout les éléments accordéon.
@@ -32,9 +34,7 @@ function displayScrollMenu() {
         accItem[i].className = 'accordionItem close';
         console.log("close")
       }
-      // On crée une variable qui renvoie la valeur du noeud parent.
        
-      let itemClass = this.parentNode.className;
       // Si au click le noeud parent à pour class "close" alors il récupère la class "open".
        
       if (itemClass == 'accordionItem close') {

@@ -22,6 +22,27 @@ ob_start();
         <div class="content-wrapper">
             <article>
                 <h2>osteopathe</h2>
+                <div class="accordionWrapper ">
+                    <div class="accordionItem close center-position">
+                        <div class="accordionItemHeading">
+                            <h3>ostéopathie</h3>
+                            <div>
+                                <p>&#x2794;</p>
+                            </div>
+                        </div>
+                        <div class="accordionItemContent">
+                            <p>L’ostéopathie est une médecine douce, manuelle, qui s’emploie à déterminer et à traiter
+                                les troubles fonctionnels qui peuvent affecter des structures composant le corps humain.
+                                Elle s’adresse aux Adultes, Femmes enceintes, Nourrissons, Enfants, Sportifs et
+                                Personnes Agées.Å</p>
+                            <p>L’ostéopathe considère le corps dans sa globalité. Il a pour but de redonner de la
+                                mobilité, là où il n’y en a pas ou peu. Un des principes fondamentaux de l‘ostéopathie
+                                est la recherche de la cause.</p>
+                            <p>C’est un thérapeute de première intention, c’est-à-dire que le patient entre en relation
+                                directe avec lui, sans prescription médicale.</p>
+                        </div>
+                    </div>
+                </div>
                 <img src="" alt="photo ostéopathe" width="" height="">
                 <p>pierre travostino</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui laboriosam animi
@@ -43,8 +64,9 @@ ob_start();
                         <div class="accordionItemContent">
                             <p>dès les 1er jours de sa vie, bébé peut être pris en charge pas un ostéopathe pédiatrique
                             </p>
-                            <button role="button" type="button"><a href="#contact-osteopathe">prendre rendez-vous sur
-                                    internet</a></button>
+                            <button role="button" type="button"><a
+                                    href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">prendre
+                                    rendez-vous en ligne</a></button>
                             <p>0667 39 46 90</p>
                         </div>
                     </div>
@@ -58,8 +80,9 @@ ob_start();
                         </div>
                         <div class="accordionItemContent">
                             <p>en lien avec l'ostéopathie, la posture permet une prise en charge complémentaire</p>
-                            <button role="button" type="button"><a href="#contact-osteopathe">prendre rendez-vous sur
-                                    internet</a></button>
+                            <button role="button" type="button"><a
+                                    href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">prendre
+                                    rendez-vous en ligne</a></button>
                             <p>0667 39 46 90</p>
                         </div>
                     </div>
@@ -73,8 +96,9 @@ ob_start();
                         </div>
                         <div class="accordionItemContent">
                             <p>atteingnez votre objectif grâce au suivi d'un expert dans le domaine du sportif</p>
-                            <button role="button" type="button"><a href="#contact-osteopathe">prendre rendez-vous sur
-                                    internet</a></button>
+                            <button role="button" type="button"><a
+                                    href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">prendre
+                                    rendez-vous en ligne</a></button>
                             <p>0667 39 46 90</p>
                         </div>
                     </div>
@@ -89,8 +113,10 @@ ob_start();
                         <div class="accordionItemContent">
                             <p>la médecine nutritionnelle a comme finalité la santé du patient en optimisant les
                                 fonctions des cellules, tissus et organes.</p>
-                            <button role="button" type="button"><a href="#contact-osteopathe">prendre rendez-vous sur
-                                    internet</a></button>
+                            <button role="button" type="button"><a
+                                    href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">prendre
+                                    rendez-vous en ligne
+                                </a></button>
                             <p>0667 39 46 90</p>
                         </div>
                     </div>
@@ -100,7 +126,10 @@ ob_start();
                     <p>sur rendez-vous</p>
                     <p>0667 39 46 90</p>
                     <p>travostinopierre@gmail.com</p>
-                    <button role="button" type="button"><a href="#contact-osteopathe">prendre rendez-vous sur
+                    <a href="https://www.osteopt.site" target="_blank">www.osteopt.site</a>
+                    <button role="button" type="button"><a
+                            href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino" target="_blank">prendre
+                            rendez-vous sur
                             doctolib</a></button>
                 </div>
             </article>
@@ -192,6 +221,17 @@ ob_start();
         <div class="">
             <article class="">
                 <h2>sage femme</h2>
+                <div id="contact-sage-femme">
+                    <p>consultation au cabinet</p>
+                    <p>sur rendez-vous</p>
+                    <p>06 66 56 25 19</p>
+                    <p>eleonore.helle@hotmail.fr</p>
+                    <a href="https://www.muret-sage-femme.com" target="_blank">www.muret-sage-femme.com</a>
+                    <button role="button" type="button"><a
+                            href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle" target="_blank">prendre
+                            rendez-vous sur
+                            doctolib</a></button>
+                </div>
             </article>
         </div>
     </section>
