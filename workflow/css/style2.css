@@ -49,6 +49,8 @@ button:hover,
 button:focus{
     background-color: #4F8CB3;
     border-color: #4F8CB3;
+    transform: scale(1.2);
+    transition: transform .2s;
 }
 
 button:hover a,
@@ -61,6 +63,11 @@ h1 {
     padding: 40px 0 40px 0;
     font-weight: 300;
     color: #509CCC;
+}
+
+h2{
+    padding-top: 20px;
+    font-weight: 900;
 }
 
 .bloc-align-center{
@@ -87,7 +94,7 @@ p{
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 1.1rem;
 }
 
 .hidden{
@@ -98,6 +105,14 @@ p{
     .presentation{
         width: 100%;
     }
+}
+
+.logo-email,
+.logo-phone{
+    height: 20px;
+    position: relative;
+    top: 3px;
+    right: 10px;
 }
 
 /* main deco*/
@@ -194,10 +209,6 @@ main section:nth-child(4){
     text-transform: uppercase;
 }
 
-#osteopathe img{
-    width: 20%;
-}
-
 #osteopathe .certification {
     text-align: center;
     position: relative;
@@ -276,6 +287,11 @@ main section:nth-child(4){
     background-color: #ffffff;
 }
 
+#infirmier .container h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
 #infirmier .presentation{
     display: flex;
     width: 800px;
@@ -287,10 +303,6 @@ main section:nth-child(4){
     background-color: #ffffff;
     margin: 10px;
     border-radius: 6px;
-}
-
-#infirmier img{
-    padding: 10px;
 }
 
 #infirmier .accordionItemContent .presentation{
@@ -352,6 +364,7 @@ main section:nth-child(4){
     #infirmier .presentation div:nth-child(1),
     #infirmier .presentation div:nth-child(2){
         width: 100%;
+        margin: 10px auto;
     }
 
     #infirmier .certification p{
@@ -364,4 +377,168 @@ main section:nth-child(4){
     
 }
 
+/* sage-femme déco */
 
+#sage-femme button{
+    border-color: #914a3a;
+}
+
+#sage-femme button:hover,
+button:focus{
+    background-color: #914a3a;
+    border-color: #914a3a;
+}
+
+#sage-femme button:hover a,
+button:focus a{
+    color: #f2f2f2;
+}
+
+#sage-femme h1 {
+    color: #914a3a;
+}
+
+#sage-femme .content-wrapper{
+    margin: 0 10%;
+}
+
+#sage-femme .container{
+    padding: 0;
+}
+
+#sage-femme .container p{
+    color: #914a3a;
+    position: relative;
+}
+
+#sage-femme  .container h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+#sage-femme .certification {
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+#sage-femme .presentation .logo{
+    font-family:'Playfair Display', serif;
+    font-size: 2rem;
+    float: initial;
+    padding-left: 0;
+    width: auto;
+    text-align: center;
+} 
+
+#sage-femme .certification:before {
+    content: "";
+    left: 10px;
+    right: 67%;
+    height: 2px;
+    background: #914a3a;
+    position: absolute;
+    top: calc(50% - 1px);
+}
+
+#sage-femme .certification::after {
+    content: "";
+    left: 67%;
+    right: 10px;
+    height: 2px;
+    background: #914a3a;
+    position: absolute;
+    top: calc(50% - 1px);
+}
+
+#sage-femme .certification p {
+    width: 400px;
+    display: inline-block;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+#sage-femme .bgimg-1{
+    background-image: url("..//view/images/sage-femme-parallax-img1.jpg");
+    height: 100%;
+}
+
+#sage-femme .bgimg-1 button{
+    position: sticky;
+}
+
+#sage-femme .bgimg-1 h3{
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+#sage-femme .bgimg-2{
+    background-image: url("..//view/images/sage-femme-parallax-img2.jpg");
+    height: 40vh;
+}
+
+#sage-femme .bgimg-1, .bgimg-2{
+    position: relative;
+    /* opacity: 0.65; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sage-femme .bgimg-1::before,
+.bgimg-2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.2);
+}
+
+#sage-femme .soin-item{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#sage-femme .soin-item .soin-item-content{
+    width: 50%;
+    text-align: center;
+}
+
+#sage-femme .soin-item .soin-item-content p{
+    width: 300px;
+    margin: auto;
+}
+
+@media screen and (max-width: 992px){
+    #sage-femme .certification p{
+        width: 100%;
+    }
+    #sage-femme .certification:before {
+        display: none;
+    }
+    
+    #sage-femme .certification::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px){
+    #sage-femme .soin-item{
+        flex-direction: column;
+    }
+
+    #sage-femme .soin-item .soin-item-content{
+        width: 100%;
+    }
+
+    #sage-femme .soin-item .soin-item-content p{
+        width: 100%;
+    }
+
+    
+}

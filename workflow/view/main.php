@@ -31,7 +31,7 @@ ob_start();
     <!-- Section Ostéopathe -->
     <section id="osteopathe" class="osteopathe">
         <div class="content-wrapper">
-        <article>
+            <article>
                 <!-- Présentation practicien -->
                 <div class="container">
                     <h1 class="text-align-center">Ostéopathe</h1>
@@ -40,9 +40,10 @@ ob_start();
                     <!-- Photo -->
                     <div class="presentation">
                         <div class="">
-                            <img class="" src="view/images/osteo.jpg" alt="photo ostéopathe" width="" height="">
+                            <img class="" src="
+                            " alt="photo ostéopathe" width="" height="">
                             <div class="">
-                                <p>Pierre Travostino</p>
+                                <h2>Pierre Travostino</h2>
                                 <p>Ostéopathe D.O. (Diplôme d'Ostéopathie) <br> Ostéopathe T.O. (Titre d'Ostéopathe)</p>
                                 <p>Diplômé de l'Institut Toulousain d'Ostéopathie</p>
                             </div>
@@ -169,8 +170,8 @@ ob_start();
                 <div id="contact-osteopathe" class="contact-position text-align-center">
                     <p>Consultation au cabinet</p>
                     <p>Sur rendez-vous</p>
-                    <p>0667 39 46 90</p>
-                    <p>travostinopierre@gmail.com</p>
+                    <a href="tel:+33667394690"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0667 39 46 90</p></a>
+                    <a href="mailto:travostinopierre@gmail.com"><p><img src="view/images/logo-email.png" alt="" class="logo-email">travostinopierre@gmail.com</p></a> 
                     <p>
                         <a href="https://www.osteopt.site" target="_blank">www.osteopt.site</a>
                     </p>
@@ -195,12 +196,12 @@ ob_start();
                     <div class="presentation">
                         <div class="">
                             <img src="" alt="photo infirmier" width="" height="">
-                            <p>Bénédicte Jacquin</p>
+                            <h2>Bénédicte Jacquin</h2>
                             <p>Infiermier D.E (Diplômé d'État)</p>
                         </div>
                         <div class="">
                             <img src="" alt="photo infirmier" width="" height="">
-                            <p>Michel Camboulives</p>
+                            <h2>Michel Camboulives</h2>
                             <p>Infiermier D.E (Diplômé d'État)</p>
                         </div>
                     </div>
@@ -301,13 +302,13 @@ ob_start();
                     <div class="presentation">
                         <div>
                             <p>Bénédicte Jacquin</p>
-                            <p>0645 47 99 45</p>
-                            <p>bene.j31@gmail.com</p>
+                            <a href="tel:+33645479945"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0645 47 99 45</p></a>
+                            <a href="mailto:bene.j31@gmail.com"><p><img src="view/images/logo-email.png" alt="" class="logo-email">bene.j31@gmail.com</p></a> 
                         </div>
                         <div>
                             <p>Michel Camboulives</p>
-                            <p>0688 15 82 04</p>
-                            <p>m_camboulives@orange.fr</p>
+                            <a href="tel:+33688158204"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0688 15 82 04</p></a>
+                            <a href="mailto:m_camboulives@orange.fr"><p><img src="view/images/logo-email.png" alt="" class="logo-email">m_camboulives@orange.fr</p></a> 
                         </div>
                     </div>
                 </div>
@@ -316,14 +317,115 @@ ob_start();
     </section>
     <!-- Section Sage-femme -->
     <section id="sage-femme" class="">
-        <div class="">
+        <div class="content-wrapper">
             <article class="">
-                <h1>Sage Femme</h1>
-                <div id="contact-sage-femme">
+                <!-- Présentation practicien -->
+                <div class="container">
+                    <div class="bgimg-1">
+                        <div class="">
+                            <h1 class="text-align-center">Sage-Femme</h1>
+                            <button role="button" type="button"><a href="#contact-sage-femme"
+                                    class="js-scrollTo">Contactez-moi</a></button>
+                            <!-- Photo -->
+                            <div class="presentation">
+                                <div class="">
+                                    <img src="" alt="photo sage-femme" width="" height="">
+                                    <h2>Éléonore Helle</h2>
+                                    <p class="logo">&</p>
+                                    <p>Sage-Femme D.E (Diplômé d'État)</p>
+                                </div>
+                            </div>
+                            <!-- Certification -->
+                            <div class="certification">
+                                <p> Sage-femme Diplômés d'État en excercice libéral & conventionné, inscrits à l'ordre
+                                    infirmier
+                                </p>
+                            </div>
+                            <!-- Presentation -->
+                            <div class="presentation-item">
+                                <div class="presentation-item-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi
+                                        qui
+                                        laboriosam
+                                        animi
+                                        ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi
+                                        reiciendis.
+                                        Quidem
+                                        voluptas dolore possimus?</p>
+                                </div>
+                                <img class="presentation-item-logo" src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bgimg-2">
+                    <div id="" class="text-align-center contact-position">
+                    <a href="tel:+33666562519"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0666 56 25 19</p></a>
+                    <a> 
+                    <a href="mailto:eleonore.helle@hotmail.fr"><p><img src="view/images/logo-email.png" alt="" class="logo-email">eleonore.helle@hotmail.fr</p></a> 
+                    <button role="button" type="button"><a
+                            href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle" target="_blank">Prendre
+                            rendez-vous sur
+                            doctolib</a></button>
+                </div>
+                    </div>
+                    <div class="bgimg-1">
+                        <h3>Quand consulter votre sage-femme ?</h3>
+                        <!-- Présentation des soins -->
+                        <div class="soin-item">
+                            <div class="soin-item-content">
+                                <img src="" alt="">
+                                <h3>Gynécologie</h3>
+                                <p>Pour votre contraception, vous pouvez vous adresser à votre sage-femme, quelque soit
+                                    le choix que avez fait. Elle pose même les DIU* !</p>
+                                <p>Elle réalisera également le frottis (pas nécessaire avant 25ans), ains que les
+                                    prélèvements lors d'un dépistage d'infection vaginale.</p>
+                                <p>Et pour finir le suivi gynécologique, elle effectuera l'examen des seins, qui est
+                                    très important, car plus le cancer du sein est dépisté tôt, meilleure sera la prise
+                                    en charge ! </p>
+                            </div>
+                            <div class="soin-item-content">
+                                <img src="" alt="">
+                                <h3>Suivi de grossesse</h3>
+                                <p>Félicitations, vous êtes enceinte! Mais commence aussi le début des démarches
+                                    administratives...</p>
+                                <p>Il faut d'abord qu'un professionnel de santé remplisse la déclaration de grossesse
+                                    (ce qui permet de n'avancer aucun frais médicaux du 6ème mois de grossesse, jusqu'au
+                                    12ème jours de votre enfant). </p>
+                                <p> Seulement après, commence votre suivis mensuel qui a pour but de prévenir certains
+                                    risques, dépister d'éventuelles pathologies et surtout de s'assurer du bien-être
+                                    maternel et foetal. </p>
+                            </div>
+                            <div class="soin-item-content">
+                                <img src="" alt="">
+                                <h3>Préparation à l'accouchement</h3>
+                                <p>Un entretien prénatal pendant votre 4ème mois et 7 cours à partir du 7ème mois sont
+                                    prévus et remboursés par la sécurité sociale. Les cours sur différents thèmes
+                                    abordent tous les sujets autour de la grossesse et de l'accouchement. Pas de tabous,
+                                    vous êtes ici pour apprendre, échanger, et trouver des réponses à vos questions.</p>
+                            </div>
+                            <div class="soin-item-content">
+                                <img src="" alt="">
+                                <h3>Visite à domicile</h3>
+                                <p>Le retour à la maison est quelque peu angoissant : combien de fois doit-il prendre le
+                                    biberon ? Est-ce que mon bébé tète suffisamment ? Ses selles sont-elles normales ?..
+                                </p>
+                                <p>Les professionnels de santé le savent, apprendre à s'occuper de son enfant n'est pas
+                                    inné. C'est pour cela que les sages-femmes se rendent à votre domicile, (dans les 7
+                                    premiers jours après l'accouchement) mais aussi pour s'assurer de l'état de santé de
+                                    votre enfant ainsi que du votre.</p>
+                                <p>Si vous n'avez pas encore de Sage-femme libérale, la plus proche de chez vous, vous
+                                    sera attribuée lors de votre séjour à la maternité.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Sage-Femme -->
+                <div id="contact-sage-femme" class="text-align-center contact-position">
                     <p>Consultation au cabinet</p>
                     <p>Sur rendez-vous</p>
-                    <p>0666 56 25 19</p>
-                    <p>eleonore.helle@hotmail.fr</p>
+                    <a href="tel:+33666562519"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0666 56 25 19</p></a>
+                    <a> 
+                    <a href="mailto:eleonore.helle@hotmail.fr"><p><img src="view/images/logo-email.png" alt="" class="logo-email">eleonore.helle@hotmail.fr</p></a> 
                     <a href="https://www.muret-sage-femme.com" target="_blank">www.muret-sage-femme.com</a>
                     <button role="button" type="button"><a
                             href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle" target="_blank">Prendre
