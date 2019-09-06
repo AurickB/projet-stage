@@ -34,9 +34,9 @@ function displayScrollMenu() {
         accItem[i].className = 'accordionItem close';
         console.log("close")
       }
-       
+
       // Si au click le noeud parent à pour class "close" alors il récupère la class "open".
-       
+
       if (itemClass == 'accordionItem close') {
         this.parentNode.className = 'accordionItem open';
         console.log("open")
@@ -76,5 +76,39 @@ function topBotton() {
   });
 }
 topBotton();
+
+
+function menuResponsive() {
+  if (matchMedia) { // on verifie si le support supporte media queries
+    document.addEventListener('DOMContentLoaded', function () {
+      if ($(window).width() < 576) {
+        $('#menu1').addClass('accordionWrapper');
+        $('#menu2').addClass('accordionItem close');
+        $('#menu3').addClass('accordionItemHeading');
+        $('#menu4').addClass('accordionItemContent');
+      }
+      else {
+        $('#menu1').removeClass('accordionWrapper');
+        $('#menu2').removeClass('accordionItem close');
+        $('#menu3').removeClass('accordionItemHeading');
+        $('#menu4').removeClass('accordionItemContent');
+      };
+    });
+  };
+}
+
+
+function scrollY(id){
+  document.addEventListener('scroll', function(){
+    let y = $(id);
+    let scrollY = y.position().top;
+  
+    if ($(document).scrollTop()>scrollY){
+      y.removeClass('hidden').addClass('animated fadeInUp')
+    }
+  });
+}
+
+
 
 

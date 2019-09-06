@@ -1,154 +1,373 @@
+/* global deco */
 
-/* accordion menu */
-
-.accordionWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    padding-top:30px;
-    /* background:#fff; */
-    box-sizing:border-box;   
-    /* box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2); */
-}
-
-@media screen and (max-width: 540px){
-    .accordionWrapper{
-        flex-direction: column;
-    }
-}
-
-.accordionItem{
-    width:50%;
+* {
     box-sizing: border-box;
-    font-family:'Open-sans',Arial,sans-serif;
-    padding: 0 2rem;
+    padding: 0;
+    margin: 0;
 }
 
-@media screen and (max-width: 540px){
-    .accordionItem{
-        width: 100%;
-        padding: 0;
-    }
+html, 
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-.accordionItemHeading{
-    cursor:pointer;
-    margin:0px 0px 10px 0px;
-    padding:10px;
-    background:#2980b9;
-    color:#fff;
-    width:100%;
+.content-wrapper {
+    margin: 0 auto;
+    padding: 0 0.25rem;
+    max-width: 1270px;
+}
+
+.container{
+    background-color: #f2f2f2;
     border-radius: 3px;
-    box-sizing: border-box;
+    box-shadow: 5px 5px 11px -6px rgba(71, 70, 70, 0.829);
+    padding: 10px;
 }
 
-.close .accordionItemContent{
-    height:0px;
-	transform: scaleY(0);
-    display:block;
-
-}
-.open .accordionItemContent{
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 0px 0px 10px 0px;
-    display:block;
-	transform: scaleY(1);
-	transform-origin: top;
-	transition: transform 0.4s ease;
-    box-sizing: border-box;
+li{
+    list-style-type: none;
 }
 
-.open .accordionItemHeading {
-    margin:0px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    background-color: #bdc3c7;
-    color: #7f8c8d;
+a{
+    text-decoration: none;
+    color: black;
 }
 
-/* Main */
+button{
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    margin: 20px auto 40px auto;
+    display: block;
+    border-color: #4F8CB3;
+}
 
+button:hover,
+button:focus{
+    background-color: #4F8CB3;
+    border-color: #4F8CB3;
+}
+
+button:hover a,
+button:focus a{
+    color: #f2f2f2;
+}
+
+h1 {
+    font-size: 2.2rem;
+    padding: 40px 0 40px 0;
+    font-weight: 300;
+    color: #509CCC;
+}
+
+.bloc-align-center{
+    margin: 0 auto;
+    display: block;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.contact-position{
+    padding-top: 7rem;
+}
+
+.presentation{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 100%
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width: 576px){
+    .presentation{
+        width: 100%;
+    }
+}
+
+/* main deco*/
+
+main section:nth-child(1),
 main section:nth-child(2),
 main section:nth-child(3),
 main section:nth-child(4),
-main section:nth-child(5),
-main section:nth-child(6){
+main section:nth-child(5){
     padding-top: 100px;
-    padding-bottom: 50px;
 }
 
-main section:nth-child(3),
-main section:nth-child(5),
-main section:nth-child(7){
+main section:nth-child(2),
+main section:nth-child(4){
     background-color: #f2f2f2;
 }
 
-/* Main intro */
+/* header deco */
 
-#intro {
-    background-image: url("../view/images/waitingroom.jpg");
+#site-header {
+    background-image: url("../view/images/outside.jpg");
     background-size: cover;
-    background-position: bottom;
-    height: 500px;
-    width: 100%;
-}
-
-#intro img{
-    display: block;
+    background-position: center;
+    /* height: 90vh; */
     height: 100%;
-    width: 100%;
+    color: #f2f2f2;
 }
 
-#intro .content-wrapper{
-    margin: 0;
-    width: 50%;
+#site-header p{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2rem
+}
+
+#site-header .content-wrapper{
+    height: 600px;
     position: relative;
-    left: 25%;
-    top: 20%;
+}
+
+#site-header article{
+    padding: 8rem 0 0 0;
+    width: 600px;
+    margin: auto;
+}
+
+#site-header button{
+    margin-top: 1.8rem;
 }
 
 
-@media screen and (max-width: 540px){
-    #intro p{
-        width: 100%;
+@media screen and (min-width: 576px) and (max-width: 1024px){
+    /* #site-header{
+        height: 65vh;
+    } */
+
+    #site-header article{
+        width: 500px;
+        padding: 9rem 0 0 0;
+    }
+
+    #site-header p {
+        margin-bottom: 5px;
+        padding: 5px 0;
     }
 }
 
-/* Section ostéopathe */
+@media screen and (max-width: 576px){
+    #site-header article{
+        width: 300px;
+    }
+
+    #site-header {
+        height: 75vh;
+    }
+
+    #site-header p {
+        margin-bottom: 5px;
+        padding: 0;
+    }
+
+    #site-header .welcome p{
+        display: none
+    }
+}
+
+/* ostéopathe deco */
 
 #osteopathe .content-wrapper{
     margin: 0 10%;
+}
+
+#osteopathe .container h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
 }
 
 #osteopathe img{
     width: 20%;
 }
 
-#osteopathe h2{
-    padding-bottom: 10px;
+#osteopathe .certification {
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+#osteopathe .certification:before {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #4F8CB3;
+    position: absolute;
+    top: calc(50% - 1px);
+}
+
+#osteopathe .certification p {
+    width: 400px;
+    display: inline-block;
+    padding: 0 40px;
+    background: #f2f2f2;
+    position: relative;
+    z-index: 1;
 }
 
 #osteopathe .presentation-full-site{
-    padding : 40px 0;
+    padding : 0 0 40px 0;
+    text-align: initial;
 }
 
-#osteopathe .presentation-responsive{
-    display: none;
+#osteopathe .presentation-full-site h3{
+    text-align: center;
+    padding-bottom: 20px 
 }
 
-@media screen and (max-width: 540px){
-    #osteopathe .presentation-full-site{
+#osteopathe .itemHeading{
+    padding-left: 10px;
+}
+
+/* #osteopathe .accordionWrapper .accordionItemHeading{
+    opacity: 0.7;
+    color: black;
+}  */
+
+#osteopathe .nourisson{
+    background-image: url("../view/images/osteopathie-nourissons.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#osteopathe .accordionWrapper .posologie{
+    background-image: url("../view/images/osteopathie-posologie.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#osteopathe .accordionWrapper .sport{
+    background-image: url("../view/images/osteopathie-sportjpg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#osteopathe .accordionWrapper .micronutrition{
+    background-image: url("../view/images/osteopathie-miconutrition.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 992px){
+    #osteopathe .certification p{
+        width: 100%;
+    }
+}
+
+/* infirmier deco */
+
+#infirmier .content-wrapper{
+    margin: 0 10%;
+}
+
+#infirmier .container{
+    background-color: #ffffff;
+}
+
+#infirmier .presentation{
+    display: flex;
+    width: 800px;
+}
+
+#infirmier .presentation div:nth-child(1),
+#infirmier .presentation div:nth-child(2){
+    width: 50%;
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+#infirmier img{
+    padding: 10px;
+}
+
+#infirmier .accordionItemContent .presentation{
+    width: inherit;
+}
+
+
+#infirmier .certification {
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+#infirmier .certification:before {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #4F8CB3;
+    position: absolute;
+    top: calc(50% - 1px);
+}
+
+#infirmier .certification p {
+    width: 400px;
+    display: inline-block;
+    padding: 0 40px;
+    background: white;
+    position: relative;
+    z-index: 1;
+}
+
+#infirmier .presentation-item{
+    display: flex;
+}
+
+#infirmier .presentation-item img{
+    max-width: 50%;
+}
+
+#infirmier .soin-courant{
+    background-image: url("../view/images/infirmer-soin-courant.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#infirmier .soin-specifique{
+    background-image: url("../view/images/infirmier-soin-specifique.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+@media screen and (max-width: 992px){
+    #infirmier .presentation{
+        flex-direction: column;
+        width: 100%;
+    }
+    #infirmier .presentation div:nth-child(1),
+    #infirmier .presentation div:nth-child(2){
+        width: 100%;
+    }
+
+    #infirmier .certification p{
+        width: 100%;
+    }
+
+    #infirmier .presentation-item img{
         display: none;
     }
-    #osteopathe .presentation-responsive{
-        display: block;
-    }
+    
 }
 
-#osteopathe button:nth-child(1){
-    margin-bottom: 20px;
-}
 

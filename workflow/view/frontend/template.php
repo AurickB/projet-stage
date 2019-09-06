@@ -10,15 +10,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Site du stage</title>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <header id="top">
+    <section id="top">
         <div class="content-wrapper">
             <nav class="navbar navbar-fixed-top">
                 <h1 class="logo"><a href="index.php?page=home">
-                        <div>centre <br>paramédical <br><i>les pyrénées</i></div>
+                        <div>centre <br>paramédical <br><i>les pyrénées - Muret</i></div>
                     </a></h1>
                 <ul class="content">
                     <li class="">
@@ -39,7 +40,7 @@
             </nav>
             <button role="button" type="button" class="menu-toggle" aria-label="navigation">&#9776</button>
         </div>
-    </header>
+    </section>
     <?= $content;?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

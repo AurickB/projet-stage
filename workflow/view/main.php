@@ -1,19 +1,21 @@
 <?php 
 ob_start();
 ?>
-<main>
+<header id="site-header">
     <!-- Présentation et contact du cabinet -->
     <section id="intro">
         <div class="content-wrapper ">
             <article class="">
-                <div class="">
+
+                <!-- <div class="welcome">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquam cupiditate facere
                         error
                         fugit inventore numquam autem, praesentium quo tempore reiciendis hic consequatur sit saepe
                         nihil
                         quos! Vitae, mollitia itaque!</p>
-                </div>
-                <div class="align-texte-center">
+                </div> -->
+
+                <div class="text-align-center">
                     <p>Adresse</p>
                     <p>53 avenue des pyréenées <br> 31600 Muret</p>
                     <p>Horaires</p>
@@ -24,78 +26,68 @@ ob_start();
             </article>
         </div>
     </section>
+</header>
+<main>
     <!-- Section Ostéopathe -->
     <section id="osteopathe" class="osteopathe">
         <div class="content-wrapper">
             <article>
-                <h2 class="align-texte-center">Osteopathe</h2>
-                <!-- Présentation soin -->
-                <div class="presentation-full-site">
-                    <p>L’ostéopathie est une médecine douce, manuelle, qui s’emploie à déterminer et à traiter
-                        les troubles fonctionnels qui peuvent affecter des structures composant le corps humain.
-                        Elle s’adresse aux Adultes, Femmes enceintes, Nourrissons, Enfants, Sportifs et
-                        Personnes Agées.</p>
-                    <p>L’ostéopathe considère le corps dans sa globalité. Il a pour but de redonner de la
-                        mobilité, là où il n’y en a pas ou peu. Un des principes fondamentaux de l‘ostéopathie
-                        est la recherche de la cause.</p>
-                    <p>C’est un thérapeute de première intention, c’est-à-dire que le patient entre en relation
-                        directe avec lui, sans prescription médicale.</p>
-                </div>
-                <div class="presentation-responsive">
-                    <div class="accordionWrapper">
-                        <div class="accordionItem close">
-                            <div class="accordionItemHeading">
-                                <h3>L'ostéopathie c'est quoi ?</h3>
-                                <div>
-                                    <p>&#x2794;</p>
+                <!-- Présentation practicien -->
+                <div class="container">
+                    <h1 class="text-align-center">Ostéopathe</h1>
+                    <button class="" role="button" type="button"><a href="#contact-osteopathe"
+                            class="js-scrollTo">Contactez-moi</a></button>
+                    <div id="presentation-osteopathe" class="presentation">
+                        <div class="">
+                            <img class="" src="view/images/osteo.jpg" alt="photo ostéopathe" width="" height="">
+                            <div class="">
+                                <p>Pierre Travostino</p>
+                                <p>Ostéopathe D.O. (Diplôme d'Ostéopathie) <br> Ostéopathe T.O. (Titre d'Ostéopathe)</p>
+                                <p>Diplômé de l'Institut Toulousain d'Ostéopathie</p>
+                                <div class="certification">
+                                    <p>Possède une certification en posturologie clinique, en micronutrition, en
+                                        praticien
+                                        énergétique et en périnatal-pédiatrique</p>
                                 </div>
                             </div>
-                            <div class="accordionItemContent">
-                                <p>L’ostéopathie est une médecine douce, manuelle, qui s’emploie à déterminer et à
-                                    traiter
-                                    les troubles fonctionnels qui peuvent affecter des structures composant le corps
-                                    humain.
-                                    Elle s’adresse aux Adultes, Femmes enceintes, Nourrissons, Enfants, Sportifs et
-                                    Personnes Agées.</p>
-                                <p>L’ostéopathe considère le corps dans sa globalité. Il a pour but de redonner de la
-                                    mobilité, là où il n’y en a pas ou peu. Un des principes fondamentaux de
-                                    l‘ostéopathie
-                                    est la recherche de la cause.</p>
-                                <p>C’est un thérapeute de première intention, c’est-à-dire que le patient entre en
-                                    relation
-                                    directe avec lui, sans prescription médicale.</p>
-                            </div>
+                        </div>
+                        <div class="presentation-full-site">
+                            <h3>L'ostéopathie c'est quoi ?</h3>
+                            <p>L’ostéopathie est une médecine douce, manuelle, qui s’emploie à déterminer et
+                                à
+                                traiter
+                                les troubles fonctionnels qui peuvent affecter des structures composant le
+                                corps
+                                humain.
+                                Elle s’adresse aux Adultes, Femmes enceintes, Nourrissons, Enfants, Sportifs
+                                et
+                                Personnes Agées.</p>
+                            <p>L’ostéopathe considère le corps dans sa globalité. Il a pour but de redonner
+                                de la
+                                mobilité, là où il n’y en a pas ou peu. Un des principes fondamentaux de
+                                l‘ostéopathie
+                                est la recherche de la cause.</p>
+                            <p>C’est un thérapeute de première intention, c’est-à-dire que le patient entre
+                                en
+                                relation
+                                directe avec lui, sans prescription médicale.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Présentation practicien -->
-                <div class="">
-                    <button class="align-bloc-center " role="button" type="button"><a href="#contact-osteopathe"
-                            class="js-scrollTo">Contactez-moi</a></button>
-                    <img class="align-bloc-center" src="view/images/osteo.jpg" alt="photo ostéopathe" width=""
-                        height="">
-                    <div class="align-bloc-center">
-                        <p class="align-texte-center">Pierre Travostino</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui
-                            laboriosam animi
-                            ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi reiciendis.
-                            Quidem
-                            voluptas dolore possimus?</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi cum iure molestiae repudiandae
-                        dolore
-                        explicabo possimus velit. Placeat earum, cum vel, illum quasi suscipit error sed nostrum
-                        consequatur
-                        temporibus culpa?</p>
-                </div>
-                <!-- Menu accordeon Osteopathe -->
+
+                <!-- Présentation soin -->
+
+                <!-- Menu accordeon présentation des soins-->
                 <div class="accordionWrapper">
+                    <!-- Ostépathie pédiatrique -->
                     <div class="accordionItem close">
-                        <div class="accordionItemHeading">
-                            <h3>Ostépathie pédiatrique</h3>
-                            <div class="link">
-                                <p>Je consulte un expert</p>
-                                <p>&#x2794;</p>
+                        <div class="nourisson accordionItemHeading">
+                            <div class="accordion-head-content">
+                                <h3>Ostépathie pédiatrique</h3>
+                                <div class="link">
+                                    <p>Je consulte un expert</p>
+                                    <p>&#x2794;</p>
+                                </div>
                             </div>
                         </div>
                         <div class="accordionItemContent">
@@ -104,16 +96,19 @@ ob_start();
                             <button role="button" type="button"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
                                     rendez-vous en ligne</a></button>
-                            <button class="align-bloc-center " role="button" type="button"><a href="#contact-osteopathe"
+                            <button class="bloc-align-center " role="button" type="button"><a href="#contact-osteopathe"
                                     class="js-scrollTo">Contactez-moi</a></button>
                         </div>
                     </div>
+                    <!-- Posturologie clinique -->
                     <div class="accordionItem close">
-                        <div class="accordionItemHeading">
-                            <h3>Posturologie clinique</h3>
-                            <div class="link">
-                                <p>J'analyse ma posture</p>
-                                <p>&#x2794;</p>
+                        <div class="posologie accordionItemHeading">
+                            <div class="accordion-head-content">
+                                <h3>Posturologie clinique</h3>
+                                <div class="link">
+                                    <p>J'analyse ma posture</p>
+                                    <p>&#x2794;</p>
+                                </div>
                             </div>
                         </div>
                         <div class="accordionItemContent">
@@ -121,16 +116,19 @@ ob_start();
                             <button role="button" type="button"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">prendre
                                     rendez-vous en ligne</a></button>
-                            <button class="align-bloc-center " role="button" type="button"><a href="#contact-osteopathe"
+                            <button class="bloc-align-center " role="button" type="button"><a href="#contact-osteopathe"
                                     class="js-scrollTo">Contactez-moi</a></button>
                         </div>
                     </div>
+                    <!-- Ostéoparthie sportif -->
                     <div class="accordionItem close">
-                        <div class="accordionItemHeading">
-                            <h3>Ostéoparthie sportif</h3>
-                            <div class="link">
-                                <p>Je me dépasse</p>
-                                <p>&#x2794;</p>
+                        <div class="sport accordionItemHeading">
+                            <div class="accordion-head-content">
+                                <h3>Ostéoparthie sportif</h3>
+                                <div class="link">
+                                    <p>Je me dépasse</p>
+                                    <p>&#x2794;</p>
+                                </div>
                             </div>
                         </div>
                         <div class="accordionItemContent">
@@ -138,16 +136,19 @@ ob_start();
                             <button role="button" type="button"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
                                     rendez-vous en ligne</a></button>
-                            <button class="align-bloc-center " role="button" type="button"><a href="#contact-osteopathe"
+                            <button class="bloc-align-center " role="button" type="button"><a href="#contact-osteopathe"
                                     class="js-scrollTo">Contactez-moi</a></button>
                         </div>
                     </div>
+                    <!-- Micronutrition -->
                     <div class="accordionItem close">
-                        <div class="accordionItemHeading">
-                            <h3>Micronutrition</h3>
-                            <div class="link">
-                                <p>Mon alimentation individuel</p>
-                                <p>&#x2794;</p>
+                        <div class="micronutrition accordionItemHeading">
+                            <div class="accordion-head-content">
+                                <h3>Micronutrition</h3>
+                                <div class="link">
+                                    <p>Mon alimentation individuel</p>
+                                    <p>&#x2794;</p>
+                                </div>
                             </div>
                         </div>
                         <div class="accordionItemContent">
@@ -157,13 +158,13 @@ ob_start();
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">prendre
                                     rendez-vous en ligne
                                 </a></button>
-                            <button class="align-bloc-center " role="button" type="button"><a href="#contact-osteopathe"
+                            <button class="bloc-align-center " role="button" type="button"><a href="#contact-osteopathe"
                                     class="js-scrollTo">Contactez-moi</a></button>
                         </div>
                     </div>
                 </div>
                 <!-- Contact Osteopathe -->
-                <div id="contact-osteopathe" class="contact-position align-texte-center">
+                <div id="contact-osteopathe" class="contact-position text-align-center">
                     <p>Consultation au cabinet</p>
                     <p>Sur rendez-vous</p>
                     <p>0667 39 46 90</p>
@@ -183,70 +184,117 @@ ob_start();
     <section id="infirmier" class="infirmier">
         <div class="content-wrapper">
             <article>
-                <h2>Infirmiers liberaux</h2>
-                <div class="photo-infirmier">
-                    <img src="" alt="photo infirmier" width="" height="">
-                    <p>Bénédicte Jacquin</p>
-                    <img src="" alt="photo infirmier" width="" height="">
-                    <p>Michel Camboulives</p>
+                <!-- Présentation practicien -->
+                <div class="container">
+                    <h1 class="text-align-center">Infirmiers liberaux</h1>
+                    <button role="button" type="button"><a href="#contact-infirmier"
+                            class="js-scrollTo">Contactez-nous</a></button>
+
+                    <div class="presentation">
+                        <div class="">
+                            <img src="" alt="photo infirmier" width="" height="">
+                            <p>Bénédicte Jacquin</p>
+                            <p>Infiermier D.E (Diplômé d'État)</p>
+                        </div>
+                        <div class="">
+                            <img src="" alt="photo infirmier" width="" height="">
+                            <p>Michel Camboulives</p>
+                            <p>Infiermier D.E (Diplômé d'État)</p>
+                        </div>
+                    </div>
+                    <div class="certification">
+                        <p> Infirmiers Diplômés d'État en excercice libéral & conventionné, inscrits à l'ordre infirmier
+                        </p>
+                    </div>
+                    <div class="presentation-item">
+                        <div class="presentation-item-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui
+                                laboriosam
+                                animi
+                                ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi reiciendis.
+                                Quidem
+                                voluptas dolore possimus?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui
+                                laboriosam
+                                animi
+                                ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi reiciendis.
+                                Quidem
+                                voluptas dolore possimus?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui
+                                laboriosam
+                                animi
+                                ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi reiciendis.
+                                Quidem
+                                voluptas dolore possimus?</p>
+                        </div>
+                        <img class="presentation-item-logo" src="view/images/infirmier-logo.jpg" alt="">
+                    </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui laboriosam animi
-                    ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi reiciendis. Quidem
-                    voluptas dolore possimus?</p>
-                <button role="button" type="button"><a href="#contact-infirmier">Contactez-nous</a></button>
+                <!-- Menu accordeon présentation des soins-->
                 <div class="accordionWrapper">
                     <div class="accordionItem close">
-                        <div class="accordionItemHeading">
-                            <h3>Soins courants</h3>
-                            <div class="link">
-                                <p></p>
-                                <p>&#x2794;</p>
+                        <div class="soin-courant accordionItemHeading">
+                            <div class="accordion-head-content">
+                                <h3>Soins courants</h3>
+                                <div class="link">
+                                    <p></p>
+                                    <p>&#x2794;</p>
+                                </div>
                             </div>
                         </div>
                         <div class="accordionItemContent">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi unde suscipit
                                 omnis eius ea soluta, rem fugiat voluptatum voluptatibus accusantium esse quasi atque
                                 officiis. Natus tenetur veritatis exercitationem recusandae!</p>
-                            <div>
-                                <p>Bénédicte Jacquin</p>
-                                <p>0645 47 99 45</p>
-                                <p>bene.j31@gmail.com</p>
-                            </div>
-                            <div>
-                                <p>Michel Camboulives</p>
-                                <p>06 88 15 82 04</p>
-                                <p>m_camboulives@orange.fr</p>
+                            <div class="presentation">
+                                <div>
+                                    <p>Bénédicte Jacquin</p>
+                                    <p>0645 47 99 45</p>
+                                    <p>bene.j31@gmail.com</p>
+                                </div>
+                                <div>
+                                    <p>Michel Camboulives</p>
+                                    <p>0688 15 82 04</p>
+                                    <p>m_camboulives@orange.fr</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="accordionItem close">
-                        <div class="accordionItemHeading">
-                            <h3>Soins spécifiques</h3>
-                            <div class="link">
-                                <p></p>
-                                <p>&#x2794;</p>
+                        <div class="soin-specifique accordionItemHeading">
+                            <div class="accordion-head-content">
+                                <h3>Soins spécifiques</h3>
+                                <div class="link">
+                                    <p></p>
+                                    <p>&#x2794;</p>
+                                </div>
                             </div>
                         </div>
                         <div class="accordionItemContent">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At earum nobis velit, voluptate
                                 ipsum quidem totam quas necessitatibus labore iste laborum architecto itaque suscipit
                                 delectus minima unde iure perferendis? Atque!</p>
-                            <div>
-                                <p>Bénédicte Jacquin</p>
-                                <p>0645 47 99 45</p>
-                                <p>bene.j31@gmail.com</p>
-                            </div>
-                            <div>
-                                <p>Michel Camboulives</p>
-                                <p>06 88 15 82 04</p>
-                                <p>m_camboulives@orange.fr</p>
+                            <div class="presentation">
+                                <div>
+                                    <p>Bénédicte Jacquin</p>
+                                    <p>0645 47 99 45</p>
+                                    <p>bene.j31@gmail.com</p>
+                                </div>
+                                <div>
+                                    <p>Michel Camboulives</p>
+                                    <p>0688 15 82 04</p>
+                                    <p>m_camboulives@orange.fr</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="contact-infirmier">
-                    <p>Pour plus de rensignement contactez nous au</p>
-                    <div>
+                <!-- Contact Infirmier -->
+                <div id="contact-infirmier" class="text-align-center contact-position">
+                    <p>Consultation au cabinet</p>
+                    <p>Sur rendez-vous</p>
+                    <p>Pour plus de renseignements contactez nous au</p>
+                    <div class="presentation">
                         <div>
                             <p>Bénédicte Jacquin</p>
                             <p>0645 47 99 45</p>
@@ -254,7 +302,7 @@ ob_start();
                         </div>
                         <div>
                             <p>Michel Camboulives</p>
-                            <p>06 88 15 82 04</p>
+                            <p>0688 15 82 04</p>
                             <p>m_camboulives@orange.fr</p>
                         </div>
                     </div>
@@ -263,14 +311,14 @@ ob_start();
         </div>
     </section>
     <!-- Section Sage-femme -->
-    <section id="" class="">
+    <section id="sage-femme" class="">
         <div class="">
             <article class="">
-                <h2>Sage Femme</h2>
+                <h1>Sage Femme</h1>
                 <div id="contact-sage-femme">
                     <p>Consultation au cabinet</p>
                     <p>Sur rendez-vous</p>
-                    <p>06 66 56 25 19</p>
+                    <p>0666 56 25 19</p>
                     <p>eleonore.helle@hotmail.fr</p>
                     <a href="https://www.muret-sage-femme.com" target="_blank">www.muret-sage-femme.com</a>
                     <button role="button" type="button"><a
@@ -282,18 +330,18 @@ ob_start();
         </div>
     </section>
     <!-- Section Psychologue -->
-    <section id="" class="">
+    <section id="psychologue" class="">
         <div class="">
             <article class="">
-                <h2>Psychologue</h2>
+                <h1>Psychologue</h1>
             </article>
         </div>
     </section>
     <!-- Section Réflexologue -->
-    <section id="" class="">
+    <section id="reflexologue" class="">
         <div class="">
             <article class="">
-                <h2>Reflexologue</h2>
+                <h1>Réflexologue</h1>
             </article>
         </div>
     </section>
