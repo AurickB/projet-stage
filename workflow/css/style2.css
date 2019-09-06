@@ -223,14 +223,8 @@ main section:nth-child(4){
     z-index: 1;
 }
 
-#osteopathe .presentation-full-site{
-    padding : 0 0 40px 0;
-    text-align: initial;
-}
-
-#osteopathe .presentation-full-site h3{
-    text-align: center;
-    padding-bottom: 20px 
+#osteopathe .presentation-item-content h3{
+    padding: 10px;
 }
 
 #osteopathe .itemHeading{

@@ -31,27 +31,32 @@ ob_start();
     <!-- Section Ostéopathe -->
     <section id="osteopathe" class="osteopathe">
         <div class="content-wrapper">
-            <article>
+        <article>
                 <!-- Présentation practicien -->
                 <div class="container">
                     <h1 class="text-align-center">Ostéopathe</h1>
                     <button class="" role="button" type="button"><a href="#contact-osteopathe"
                             class="js-scrollTo">Contactez-moi</a></button>
-                    <div id="presentation-osteopathe" class="presentation">
+                    <!-- Photo -->
+                    <div class="presentation">
                         <div class="">
                             <img class="" src="view/images/osteo.jpg" alt="photo ostéopathe" width="" height="">
                             <div class="">
                                 <p>Pierre Travostino</p>
                                 <p>Ostéopathe D.O. (Diplôme d'Ostéopathie) <br> Ostéopathe T.O. (Titre d'Ostéopathe)</p>
                                 <p>Diplômé de l'Institut Toulousain d'Ostéopathie</p>
-                                <div class="certification">
-                                    <p>Possède une certification en posturologie clinique, en micronutrition, en
-                                        praticien
-                                        énergétique et en périnatal-pédiatrique</p>
-                                </div>
                             </div>
                         </div>
-                        <div class="presentation-full-site">
+                    </div>
+                    <!-- Certification -->
+                    <div class="certification">
+                        <p>Possède une certification en posturologie clinique, en micronutrition, en
+                            praticien
+                            énergétique et en périnatal-pédiatrique</p>
+                    </div>
+                    <!-- Presentation -->
+                    <div class="presentation-item">
+                        <div class="presentation-item-content">
                             <h3>L'ostéopathie c'est quoi ?</h3>
                             <p>L’ostéopathie est une médecine douce, manuelle, qui s’emploie à déterminer et
                                 à
@@ -74,9 +79,6 @@ ob_start();
                         </div>
                     </div>
                 </div>
-
-                <!-- Présentation soin -->
-
                 <!-- Menu accordeon présentation des soins-->
                 <div class="accordionWrapper">
                     <!-- Ostépathie pédiatrique -->
@@ -189,7 +191,7 @@ ob_start();
                     <h1 class="text-align-center">Infirmiers liberaux</h1>
                     <button role="button" type="button"><a href="#contact-infirmier"
                             class="js-scrollTo">Contactez-nous</a></button>
-
+                    <!-- Photo -->
                     <div class="presentation">
                         <div class="">
                             <img src="" alt="photo infirmier" width="" height="">
@@ -202,10 +204,12 @@ ob_start();
                             <p>Infiermier D.E (Diplômé d'État)</p>
                         </div>
                     </div>
+                    <!-- Certification -->
                     <div class="certification">
                         <p> Infirmiers Diplômés d'État en excercice libéral & conventionné, inscrits à l'ordre infirmier
                         </p>
                     </div>
+                    <!-- Presentation -->
                     <div class="presentation-item">
                         <div class="presentation-item-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui
