@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style3.css">
     <title>Site du stage</title>
 </head>
 
@@ -19,24 +19,26 @@
     <section id="top">
         <div class="content-wrapper">
             <nav class="navbar navbar-fixed-top">
-                <h1 class="logo"><a href="index.php?page=home">
+                <h1 class="logo"><a href="index.php?page=main">
                         <div>centre <br>paramédical <br><i>les pyrénées - Muret</i></div>
                     </a></h1>
                 <ul class="content">
                     <li class="">
-                        <a href="#actualites" class="js-scrollTo">actualités</a></li>
+                        <a href="index.php?page=actualite"><h1>actualités</h1> </a></li>
                     <li class="">
-                        <a href="#osteopathe" class="js-scrollTo">ostéopathe</a></li>
+                        <a href="#osteopathe" class="js-scrollTo"><h1>ostéopathe</h1>
+                            </a></li>
                     <li class="">
-                        <a href="#infirmier" class="js-scrollTo">infirmiers libéraux</a></li>
+                        <a href="#infirmier" class="js-scrollTo"><h1>infirmiers libéraux</h1>
+                            </a></li>
                     <li class="">
-                        <a href="#sage-femme" class="js-scrollTo">sage femme</a></li>
+                        <a href="#sage-femme" class="js-scrollTo"><h1>sage femme</h1></a></li>
                     <li class="">
-                        <a href="#psychologue" class="js-scrollTo">psychologue</a></li>
+                        <a href="#psychologue" class="js-scrollTo"><h1>psychologue</h1></a></li>
                     <li class="">
-                        <a href="#reflexologue" class="js-scrollTo">reflexologue</a></li>
+                        <a href="#reflexologue" class="js-scrollTo"><h1>reflexologue</h1></a></li>
                     <li class="">
-                        <a href="#contact" class="js-scrollTo">contact</a></li>
+                        <a href="index.php?page=contact">contact</a></li>
                 </ul>
             </nav>
             <button role="button" type="button" class="menu-toggle" aria-label="navigation">&#9776</button>

@@ -6,18 +6,9 @@ ob_start();
     <section id="intro">
         <div class="content-wrapper ">
             <article class="">
-
-                <!-- <div class="welcome">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquam cupiditate facere
-                        error
-                        fugit inventore numquam autem, praesentium quo tempore reiciendis hic consequatur sit saepe
-                        nihil
-                        quos! Vitae, mollitia itaque!</p>
-                </div> -->
-
                 <div class="text-align-center">
                     <p>Adresse</p>
-                    <p>53 avenue des pyréenées <br> 31600 Muret</p>
+                    <p>53 Avenue des Pyrénées <br> 31600 Muret</p>
                     <p>Horaires</p>
                     <p>De 9h à 20h</p>
                     <p>Du lundi au vendredi</p>
@@ -170,10 +161,15 @@ ob_start();
                 <div id="contact-osteopathe" class="contact-position text-align-center">
                     <p>Consultation au cabinet</p>
                     <p>Sur rendez-vous</p>
-                    <a href="tel:+33667394690"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0667 39 46 90</p></a>
-                    <a href="mailto:travostinopierre@gmail.com"><p><img src="view/images/logo-email.png" alt="" class="logo-email">travostinopierre@gmail.com</p></a> 
+                    <a href="tel:+33667394690">
+                        <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0667 39 46 90</p>
+                    </a>
+                    <a href="mailto:travostinopierre@gmail.com">
+                        <p><img src="view/images/logo-email.png" alt="" class="logo-email">travostinopierre@gmail.com
+                        </p>
+                    </a>
                     <p>
-                        <a href="https://www.osteopt.site" target="_blank">www.osteopt.site</a>
+                        <a href="https://www.osteopt.site" target="_blank" class="focus">www.osteopt.site</a>
                     </p>
                     <button role="button" type="button"><a
                             href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino" target="_blank">Prendre
@@ -302,13 +298,23 @@ ob_start();
                     <div class="presentation">
                         <div>
                             <p>Bénédicte Jacquin</p>
-                            <a href="tel:+33645479945"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0645 47 99 45</p></a>
-                            <a href="mailto:bene.j31@gmail.com"><p><img src="view/images/logo-email.png" alt="" class="logo-email">bene.j31@gmail.com</p></a> 
+                            <a href="tel:+33645479945">
+                                <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0645 47 99 45</p>
+                            </a>
+                            <a href="mailto:bene.j31@gmail.com">
+                                <p><img src="view/images/logo-email.png" alt="" class="logo-email">bene.j31@gmail.com
+                                </p>
+                            </a>
                         </div>
                         <div>
                             <p>Michel Camboulives</p>
-                            <a href="tel:+33688158204"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0688 15 82 04</p></a>
-                            <a href="mailto:m_camboulives@orange.fr"><p><img src="view/images/logo-email.png" alt="" class="logo-email">m_camboulives@orange.fr</p></a> 
+                            <a href="tel:+33688158204">
+                                <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0688 15 82 04</p>
+                            </a>
+                            <a href="mailto:m_camboulives@orange.fr">
+                                <p><img src="view/images/logo-email.png" alt=""
+                                        class="logo-email">m_camboulives@orange.fr</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -358,15 +364,21 @@ ob_start();
                         </div>
                     </div>
                     <div class="bgimg-2">
-                    <div id="" class="text-align-center contact-position">
-                    <a href="tel:+33666562519"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0666 56 25 19</p></a>
-                    <a> 
-                    <a href="mailto:eleonore.helle@hotmail.fr"><p><img src="view/images/logo-email.png" alt="" class="logo-email">eleonore.helle@hotmail.fr</p></a> 
-                    <button role="button" type="button"><a
-                            href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle" target="_blank">Prendre
-                            rendez-vous sur
-                            doctolib</a></button>
-                </div>
+                        <div id="" class="text-align-center contact-position">
+                            <a href="tel:+33666562519">
+                                <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0666 56 25 19</p>
+                            </a>
+                            <a>
+                                <a href="mailto:eleonore.helle@hotmail.fr">
+                                    <p><img src="view/images/logo-email.png" alt=""
+                                            class="logo-email">eleonore.helle@hotmail.fr</p>
+                                </a>
+                                <button role="button" type="button"><a
+                                        href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle"
+                                        target="_blank">Prendre
+                                        rendez-vous sur
+                                        doctolib</a></button>
+                        </div>
                     </div>
                     <div class="bgimg-1">
                         <h3>Quand consulter votre sage-femme ?</h3>
@@ -423,14 +435,19 @@ ob_start();
                 <div id="contact-sage-femme" class="text-align-center contact-position">
                     <p>Consultation au cabinet</p>
                     <p>Sur rendez-vous</p>
-                    <a href="tel:+33666562519"><p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0666 56 25 19</p></a>
-                    <a> 
-                    <a href="mailto:eleonore.helle@hotmail.fr"><p><img src="view/images/logo-email.png" alt="" class="logo-email">eleonore.helle@hotmail.fr</p></a> 
-                    <a href="https://www.muret-sage-femme.com" target="_blank">www.muret-sage-femme.com</a>
-                    <button role="button" type="button"><a
-                            href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle" target="_blank">Prendre
-                            rendez-vous sur
-                            doctolib</a></button>
+                    <a href="tel:+33666562519">
+                        <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0666 56 25 19</p>
+                    </a>
+                    <a>
+                        <a href="mailto:eleonore.helle@hotmail.fr">
+                            <p><img src="view/images/logo-email.png" alt="" class="logo-email">eleonore.helle@hotmail.fr
+                            </p>
+                        </a>
+                        <a href="https://www.muret-sage-femme.com" target="_blank" class="focus">www.muret-sage-femme.com</a>
+                        <button role="button" type="button"><a
+                                href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle" target="_blank">Prendre
+                                rendez-vous sur
+                                doctolib</a></button>
                 </div>
             </article>
         </div>
@@ -440,6 +457,7 @@ ob_start();
         <div class="">
             <article class="">
                 <h1>Psychologue</h1>
+                <p>à venir ...</p>
             </article>
         </div>
     </section>
@@ -448,11 +466,31 @@ ob_start();
         <div class="">
             <article class="">
                 <h1>Réflexologue</h1>
+                <p>à venir ...</p>
             </article>
         </div>
     </section>
     <p><a href="#top" id="topBotton" class="js-scrollTo invisible"></a></p>
 </main>
+<footer id="site-footer">
+    <section id="contact">
+        <div class=content-wrapper>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.314985452827!2d1.3201206508885928!3d43.4540207790262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aec9b685a74465%3A0x6d2599531f2c3c56!2s53%20Avenue%20des%20Pyr%C3%A9n%C3%A9es%2C%2031600%20Muret!5e0!3m2!1sfr!2sfr!4v1568019905406!5m2!1sfr!2sfr"
+                frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div class="text-align-center">
+                <p>53 Avenue des Pyrénées <br> 31600 Muret</p>
+                <p>Horaires</p>
+                <p>De 9h à 20h</p>
+                <p>Du lundi au vendredi</p>
+            </div>
+            <div class="other-page">
+                <a href="index.php?page=contact"class="focus"><p>Nous contacter</p></a>
+                <a href="index.php?page=actualite" class="focus"><p>Actualités</p></a>
+            </div>
+        </div>
+    </section>
+</footer>
 <?php 
 $content = ob_get_clean();
 

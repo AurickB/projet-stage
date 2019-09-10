@@ -68,14 +68,14 @@ function scrollTo() {
 scrollTo();
 
 
-function topBotton() {
+function topBotton(id) {
   document.addEventListener('DOMContentLoaded', function () {
     window.onscroll = function () {
-      document.getElementById("topBotton").className = (window.pageYOffset > 50) ? "visible" : "invisible";
+      document.getElementById(id).className = (window.pageYOffset > 50) ? "visible" : "invisible";
     };
   });
 }
-topBotton();
+topBotton("topBotton");
 
 
 function menuResponsive() {

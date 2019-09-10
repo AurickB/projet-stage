@@ -1,4 +1,4 @@
-/* global deco */
+/* ------ global deco ------ */
 
 * {
     box-sizing: border-box;
@@ -19,13 +19,6 @@ body{
     max-width: 1270px;
 }
 
-.container{
-    background-color: #f2f2f2;
-    border-radius: 3px;
-    box-shadow: 5px 5px 11px -6px rgba(71, 70, 70, 0.829);
-    padding: 10px;
-}
-
 li{
     list-style-type: none;
 }
@@ -42,13 +35,13 @@ button{
     text-align: center;
     margin: 20px auto 40px auto;
     display: block;
-    border-color: #4F8CB3;
+    border-color: #233548;
 }
 
 button:hover,
 button:focus{
-    background-color: #4F8CB3;
-    border-color: #4F8CB3;
+    background-color: #233548;
+    border-color: #233548;
     transform: scale(1.2);
     transition: transform .2s;
 }
@@ -62,12 +55,55 @@ h1 {
     font-size: 2.2rem;
     padding: 40px 0 40px 0;
     font-weight: 300;
-    color: #509CCC;
+    color: #233548;
 }
 
 h2{
     padding-top: 20px;
     font-weight: 900;
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width: 576px){
+    .presentation{
+        width: 100%;
+    }
+}
+
+/* <------ main deco ------> */
+
+main section:nth-child(1),
+main section:nth-child(2),
+main section:nth-child(3),
+main section:nth-child(4),
+main section:nth-child(5){
+    padding-top: 100px;
+}
+
+main section:nth-child(2),
+main section:nth-child(4){
+    background-color: #f2f2f2;
+}
+
+.focus{
+    font-weight: 700;
+}
+
+.container{
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    box-shadow: 5px 5px 11px -6px rgba(71, 70, 70, 0.829);
+    padding: 10px;
 }
 
 .bloc-align-center{
@@ -90,23 +126,6 @@ h2{
     width: 100%
 }
 
-p{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 1.1rem;
-}
-
-.hidden{
-    display: none;
-}
-
-@media screen and (max-width: 576px){
-    .presentation{
-        width: 100%;
-    }
-}
-
 .logo-email,
 .logo-phone{
     height: 20px;
@@ -115,22 +134,12 @@ p{
     right: 10px;
 }
 
-/* main deco*/
-
-main section:nth-child(1),
-main section:nth-child(2),
-main section:nth-child(3),
-main section:nth-child(4),
-main section:nth-child(5){
-    padding-top: 100px;
+@media screen and (max-width: 992px){
+    .container{
+        box-shadow: none;
+    }
 }
-
-main section:nth-child(2),
-main section:nth-child(4){
-    background-color: #f2f2f2;
-}
-
-/* header deco */
+/* <------ header deco ------> */
 
 #site-header {
     background-image: url("../view/images/outside.jpg");
@@ -198,10 +207,10 @@ main section:nth-child(4){
     }
 }
 
-/* ostéopathe deco */
+/* <------ ostéopathe deco ------> */
 
 #osteopathe .content-wrapper{
-    margin: 0 10%;
+    margin: 0 8%;
 }
 
 #osteopathe .container h1{
@@ -275,12 +284,16 @@ main section:nth-child(4){
     #osteopathe .certification p{
         width: 100%;
     }
+
+    #osteopathe .content-wrapper{
+        margin: 0 2%;
+    }
 }
 
-/* infirmier deco */
+/* <------ infirmier déco ------> */
 
 #infirmier .content-wrapper{
-    margin: 0 10%;
+    margin: 0 8%;
 }
 
 #infirmier .container{
@@ -339,8 +352,15 @@ main section:nth-child(4){
     display: flex;
 }
 
+#infirmier .presentation-item-content{
+    width: 55%;
+    padding-right: 10px;
+}
+
 #infirmier .presentation-item img{
-    max-width: 50%;
+    width: 45%;
+    height: 100%;
+    margin: auto
 }
 
 #infirmier .soin-courant{
@@ -371,13 +391,29 @@ main section:nth-child(4){
         width: 100%;
     }
 
+    #infirmier .presentation-item-content {
+        width: 100%
+    }
+
     #infirmier .presentation-item img{
         display: none;
+    }
+
+    #infirmier .content-wrapper{
+        margin: 0 2%;
     }
     
 }
 
-/* sage-femme déco */
+/* <------ sage-femme déco ------> */
+
+#sage-femme .content-wrapper{
+    margin: 0 8%;
+}
+
+#sage-femme h1 {
+    color: #914a3a;
+}
 
 #sage-femme button{
     border-color: #914a3a;
@@ -389,17 +425,19 @@ button:focus{
     border-color: #914a3a;
 }
 
+#sage-femme #contact-sage-femme button{
+    border-color: #233548;
+}
+
+#sage-femme #contact-sage-femme button:hover,
+button:focus{
+    background-color: #233548;
+    border-color: #233548;
+}
+
 #sage-femme button:hover a,
 button:focus a{
     color: #f2f2f2;
-}
-
-#sage-femme h1 {
-    color: #914a3a;
-}
-
-#sage-femme .content-wrapper{
-    margin: 0 10%;
 }
 
 #sage-femme .container{
@@ -464,7 +502,8 @@ button:focus a{
     height: 100%;
 }
 
-#sage-femme .bgimg-1 button{
+#sage-femme .bgimg-1 button,
+.bgimg-2 button{
     position: sticky;
 }
 
@@ -479,17 +518,21 @@ button:focus a{
     height: 40vh;
 }
 
+#sage-femme .bgimg-2 .contact-position{
+    padding-top: 4rem;;
+}
+
 #sage-femme .bgimg-1, .bgimg-2{
     position: relative;
-    /* opacity: 0.65; */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+/* gérer l'opacité des images en background */
 #sage-femme .bgimg-1::before,
-.bgimg-2::before{
+.bgimg-2::before{ 
     content: '';
     position: absolute;
     top: 0;
@@ -518,12 +561,13 @@ button:focus a{
     #sage-femme .certification p{
         width: 100%;
     }
-    #sage-femme .certification:before {
+    #sage-femme .certification:before,
+    .certification::after  {
         display: none;
     }
     
-    #sage-femme .certification::after {
-        display: none;
+    #sage-femme .content-wrapper{
+        margin: 0 2%;
     }
 }
 
@@ -538,7 +582,63 @@ button:focus a{
 
     #sage-femme .soin-item .soin-item-content p{
         width: 100%;
+    }    
+}
+
+/* <------ footer déco ------> */
+
+#site-footer{
+    background-color: #233548;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+#site-footer .content-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#site-footer iframe{
+    width: 50%;
+    height: 350px;
+    padding: 10px
+}
+
+#site-footer .text-align-center{
+    width: 50%;
+    margin: auto;
+}
+
+#site-footer .other-page{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 400px;
+}
+
+#site-footer .other-page p,
+.other-page a{
+    color: inherit;
+}
+
+@media screen and (max-width: 992px){
+    #site-footer .map{
+        flex-direction: column;
     }
 
-    
+    #site-footer iframe{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    #site-footer .text-align-center{
+        width: 100%;
+    }
+
+    #site-footer .other-page{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
 }
