@@ -12,7 +12,7 @@ ob_start();
                     <p>Horaires</p>
                     <p>De 9h à 20h</p>
                     <p>Du lundi au vendredi</p>
-                    <button role="button" type="button"><a href="#contact">Prenez rendez-vous</a></button>
+                    <button role="button" type="button"><a href="index.php?page=contact">Contactez-nous</a></button>
                 </div>
             </article>
         </div>

@@ -1,13 +1,14 @@
 <?php 
 ob_start();
 
-// session_start();
+
 
 ?>
 <section id="contact">
     <div class="content-wrapper">
+    <h1 class="page-header">Contact</h1>
         
-        <!-- <?php if(isset($_SESSION['errors'])): 
+        <?php if(isset($_SESSION['errors'])): 
         // Si il y a une erreurs on affiche le message.   
         ?>
         <div class="alert alert-danger">
@@ -20,46 +21,42 @@ ob_start();
         <div class="alert alert-success">
             <p>Votre message a bien été envoyé</p>
         </div>
-        <?php endif; ?> -->
+        <?php endif; ?>
         
         <form action="view/post_contact.php" method="post">
             <div class="form-group">
-                <label for="inputemail">Adresse Email</label>
+                <label for="inputemail">Votre adresse e-mail</label>
                 <input type="text" class="form-control" id="inputemail" name="email" aria-describedby="emailHelp" value="<?= isset(($_SESSION['inputs']['email'])) ? $_SESSION['inputs']['email'] : ''; ?>">
                 <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre courriel avec qui que ce soit d'autre.</small>
             </div>
             <div class="form-group">
-                <label for="inputname">Nom</label>
+                <label for="inputname">Votre nom</label>
                 <input type="text" class="form-control" id="inputname" name="name" value="<?= isset(($_SESSION['inputs']['name'])) ? $_SESSION['inputs']['name'] : ''; ?>">
             </div>
             <div class="form-group">
-                <label for="selectprac">Selectionner un practicien</label>
-                <select class="form-control" id="selectprac" name="select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <label for="inputservice">Sélectionner un praticien</label>
+                <select class="form-control" id="inputservice" name="service">
+                <option value="0">Aurick</option>
+                <option value="1">Béné</option>
+                <option value="2">Céline</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="inputcontent">Votre message</label>
-                <textarea class="form-control" id="inputcontent" name="content"><?= isset(($_SESSION['input']['content'])) ? $_SESSION['input']['content'] : ''; ?></textarea>
+                <textarea class="form-control" id="inputcontent" name="content"><?= isset(($_SESSION['inputs']['content'])) ? $_SESSION['inputs']['content'] : ''; ?></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
-        <h2>Debug :</h2>
-        <?php var_dump($_SESSION);?>
     </div>
 </section>
 
 
 <?php 
 
-// // Suppression des informations
-// unset($_SESSION['inputs']);
-// unset($_SESSION['success']);
-// unset($_SESSION['errors']);
+// Suppression des informations
+unset($_SESSION['inputs']);
+unset($_SESSION['success']);
+unset($_SESSION['errors']);
 
 $content = ob_get_clean();
 

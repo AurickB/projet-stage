@@ -1,5 +1,5 @@
 
-/* navbar deco */
+/* <------ navbar menu deco ------> */
 
 .navbar{
     background-color: #233548;
@@ -103,6 +103,14 @@
     font-size: 3rem;
     color: #fff;
     cursor: grab;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+#top .menu-toggle button:hover,
+button:focus{
+    background-color: transparent;
+    border-color: none;
 }
 
 @media screen and (max-width: 1140px) {
@@ -117,11 +125,11 @@
         height: 100px;
     }
 
-    .logo{
+    .logo {
         padding-left: 1rem;
         margin-left: 0;
         text-align: left;
-        width: 50%;
+        width: 200px;
     }
 
     .menu-toggle {
@@ -160,7 +168,7 @@
     }
 }
 
-/* scroll menu deco */
+/* <------ scroll menu deco ------> */
 
 a#topBotton{
     position: fixed;
@@ -216,12 +224,12 @@ a#topBotton.visible{
     font-family:'Open-sans',Arial,sans-serif;
     padding: 0 0.6rem;
     transform: scale(.9);
-    transition: transform .2s;
+    transition: transform .3s;
 }
 
 .accordionItem:hover,
 .accordionItem:focus{
-    transform: scale(1);
+    transform: scale(.93);
     padding: 0 0 0 0;
 }
 
@@ -279,7 +287,7 @@ a#topBotton.visible{
     border: 1px solid #ddd;
     margin: 0px 0px 10px 0px;
     display:block;
-	transform: scaleY(1);
+	/* transform: scaleY(1); */
 	transform-origin: top;
 	transition: transform 0.4s ease;
     box-sizing: border-box;
@@ -292,5 +300,5 @@ a#topBotton.visible{
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     background-color: #bdc3c7;
-    color: #4F8CB3;
+    color: #233548;
 }

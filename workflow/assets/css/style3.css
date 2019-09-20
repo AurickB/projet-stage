@@ -1,0 +1,185 @@
+
+
+/* <------ contact déco ------> */
+
+#contact{
+    width: 1000px;
+    margin: auto;
+}
+
+
+#contact .content-wrapper{
+    margin: 0 8%;
+    padding-top: 8rem;
+}
+
+@media screen and (max-width: 992px){
+    #contact{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+#contact .page-header{
+    font-weight: bold;
+    font-size: 2.1333em;
+
+}
+
+
+#contact textarea{
+    width: 100%;
+    height: 100px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+.form-text {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+
+/* <------ actu déco ------> */
+
+#actualite .content-wrapper{
+    margin : 0 8%;
+    padding-top: 100px;
+}
+
+#actualite .page-header{
+    font-weight: bold;
+    font-size: 2.1333em;
+
+}
+
+#actualite h2{
+    text-transform: uppercase;
+    font-size: 1.26rem;
+    display: inline-block;
+}
+
+#actualite p{
+    padding: 10px 0 10px 0;
+}
+
+#actualite .zone-actu{
+    padding-top: 37px;
+    padding-bottom: 55px;
+}
+
+#actualite .update-actu .date-actus{
+    color: #fd7974;
+    font-size: 1.067em;
+    font-weight: 600;
+}
+
+#actualite .update-actu p{
+    text-transform: uppercase;
+    font-size: 0.68rem;
+}
+
+#actualite .btn-actu{
+    text-align: right;
+}
+
+#actualite .btn-actu a{
+    display: inline-block;
+    color: #233548;
+    border: 1px solid #233548;
+    border-radius: 5px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    font-size: 0.867em;
+    font-family: 'raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+#actualite .btn-actu a:hover,
+#actualite .btn-actu a:focus{
+    background-color: #233548;
+    border-color: #233548;
+    color: white;
+} 
+
+#page {
+    padding-bottom: 20px;
+}
+
+#page ul{
+   display: flex;
+   justify-content: center;
+}
+
+#page ul li a{
+    padding : 8px 16px ;
+    border: 1px solid #233548;
+}
+
+#page ul li:first-child a{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#page ul li:last-child a{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#page ul li.active>a{
+    background-color: #233548;
+    color: #f2f2f2;
+}
+
+#page li:not(.active)>a:hover{
+   background-color: #f2f2f2;
+}
+
+
+
+
+
+
+

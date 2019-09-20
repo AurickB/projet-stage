@@ -1,34 +1,31 @@
 <?php 
 
-function displayMain(){
-    require 'view/main.php';
+require_once 'model/frontendModel.php';
+
+function displayHome(){
+    require 'view/home.php';
 }
 
 function displayContact(){
     require 'view/contact.php';
 }
 
-function displayActu(){
-    require 'view/actualite.php';
+function displayNew(){
+    $actus = getActualite();
+    require 'view/news.php';
 }
 
-// function displayPostContact(){
-//     require 'view/post_contact.php';
-// }
-
 function displayPage(){
-    switch ($_GET['page']) {
-        case 'main':
-            displayMain();
-            break;
+    $page = $_GET['page'] ?? '404';
+    switch ($page) {
         case 'contact':
             displayContact();
             break;
         case 'actualite':
-            displayActu();
+            displayNew();
             break;
         default:
-            displayMain();
+            displayHome();
             break;
     }
 }

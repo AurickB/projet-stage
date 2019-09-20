@@ -31,19 +31,21 @@ a{
 button{
     border-radius: 5px;
     width: 200px;
-    height: 25px;
+    height: auto;
+    padding: 15px;
     text-align: center;
     margin: 20px auto 40px auto;
     display: block;
     border-color: #233548;
+    font-weight: 700;
+    font-size: 0.867em;
+    font-family: 'raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 button:hover,
 button:focus{
     background-color: #233548;
     border-color: #233548;
-    transform: scale(1.2);
-    transition: transform .2s;
 }
 
 button:hover a,
@@ -142,7 +144,7 @@ main section:nth-child(4){
 /* <------ header deco ------> */
 
 #site-header {
-    background-image: url("../view/images/outside.jpg");
+    background-image: url("../../view/images/outside-min.jpg");
     background-size: cover;
     background-position: center;
     /* height: 90vh; */
@@ -229,7 +231,7 @@ main section:nth-child(4){
     left: 0;
     right: 0;
     height: 2px;
-    background: #4F8CB3;
+    background: #233548;
     position: absolute;
     top: calc(50% - 1px);
 }
@@ -251,31 +253,26 @@ main section:nth-child(4){
     padding-left: 10px;
 }
 
-/* #osteopathe .accordionWrapper .accordionItemHeading{
-    opacity: 0.7;
-    color: black;
-}  */
-
 #osteopathe .nourisson{
-    background-image: url("../view/images/osteopathie-nourissons.jpg");
+    background-image: url("../../view/images/osteopathie-nourissons.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #osteopathe .accordionWrapper .posologie{
-    background-image: url("../view/images/osteopathie-posologie.jpg");
+    background-image: url("../../view/images/osteopathie-posologie.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #osteopathe .accordionWrapper .sport{
-    background-image: url("../view/images/osteopathie-sportjpg.jpg");
+    background-image: url("../../view/images/osteopathie-sportjpg.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #osteopathe .accordionWrapper .micronutrition{
-    background-image: url("../view/images/osteopathie-miconutrition.jpg");
+    background-image: url("../../view/images/osteopathie-miconutrition.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -364,13 +361,13 @@ main section:nth-child(4){
 }
 
 #infirmier .soin-courant{
-    background-image: url("../view/images/infirmer-soin-courant.png");
+    background-image: url("../../view/images/infirmer-soin-courant.png");
     background-size: cover;
     background-position: center;
 }
 
 #infirmier .soin-specifique{
-    background-image: url("../view/images/infirmier-soin-specifique.jpg");
+    background-image: url("../../view/images/infirmier-soin-specifique.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -498,7 +495,7 @@ button:focus a{
 }
 
 #sage-femme .bgimg-1{
-    background-image: url("..//view/images/sage-femme-parallax-img1.jpg");
+    background-image: url("../../view/images/sage-femme-parallax-img1.jpg");
     height: 100%;
 }
 
@@ -514,7 +511,7 @@ button:focus a{
 }
 
 #sage-femme .bgimg-2{
-    background-image: url("..//view/images/sage-femme-parallax-img2.jpg");
+    background-image: url("../../view/images/sage-femme-parallax-img2.jpg");
     height: 40vh;
 }
 
@@ -611,7 +608,7 @@ button:focus a{
 
 #site-footer .other-page{
     display: flex;
-    margin: auto;
+    margin: 15px auto;
     justify-content: space-around;
     width: 400px;
 }

@@ -1,0 +1,13 @@
+
+#login .content-wrapper{
+    padding-top: 100px;
+}
+
+#login h1{
+    text-align: center;
+}
+
+#login form{
+    width: 500px;
+    margin: auto;
+}
