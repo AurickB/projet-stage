@@ -1,40 +1,76 @@
 <?php 
-require_once 'inc/header.php';
+session_start();
+require_once 'inc/functions.php';
 ?>
+
 <div style="padding-top :100px;">
 <?php 
 if (!empty($_POST)){
+
     $errors =array();
+
+    require_once 'inc/bddConfig.php';
+    $pdo = connect();
 
     if (empty($_POST['email']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
         $errors['email']= "Votre adresse email n'est pas valide";
+    } else {
+        // On vérifie si l'email n'est pas déjà utilisé pour un autre compte.
+        $req = $pdo->prepare('SELECT id FROM user WHERE email = ?');
+        $req->execute([$_POST['email']]);
+        $user = $req -> fetch(); 
+        if ($user){
+            $errors['email'] = 'Cet email est déjà utilisé';
+        }
+
     }
 
     if (empty($_POST['password']) || $_POST['password'] != $_POST['passConfirm'] ){
         $errors['email']= "Vous devez rentrer un mot de passe valide";
     }
 
-
+    // Si il n'y a pas d'erreur on ajoute l'utilisateur à la base de données.
     if (empty($errors)){
-        require_once 'inc/bddConfig.php';
-        $pdo = connect();
-        $req = $pdo->prepare("INSERT INTO user SET email = ?, password = ?");
+        $req = $pdo->prepare("INSERT INTO user SET email = ?, password = ?, confirmation_token = ?");
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        // Déclaration d'un indentificateur d'une longueur de 60 caractère.
+        $token = str_random(60);
         $req->execute ([
             $_POST['email'], 
-            $password
+            $password,
+            $token
         ]);
-        die('Le compte a bien été crée.');
-     }
-    
-    var_dump ($errors);
+        // Permet de récupérer l'ID généré par $pdo.
+        $user_id = $pdo->lastInsertId(); 
+        // Envoie du mail de validation.
+        $mail = mail($_POST['email'], 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttp://localhost:8888/projet_stage/workflow/admin/confirm.php?id=$user_id&token=$token");
+        
+        header('Location: login.php');
+        exit();
+    }
 }
 ?>
 </div>
 
+<?php require_once 'inc/header.php';?>
+
 <section id="login">
     <div class="content-wrapper">
         <h1>S'inscrire</h1>
+        <?php if (!empty($errors)): ?>
+        <div class="alert alert-danger">
+            <p>Vous n'avez pas rempli le formulaire correctement</p>
+            <ul>
+                <?php  foreach($errors as $error){
+                    ?>
+                    <li><?=$error; ?></li>
+                <?php 
+                }
+                ?>
+            </ul>
+        </div>
+
+    <?php endif; ?>
         <form action='' method='post'>
             <div class="form-group">
                 <label for="InputEmail">Email</label>
@@ -53,7 +89,5 @@ if (!empty($_POST)){
     </div>
 </section>
 
-<?php 
-require_once 'inc/footer.php';
-?>
+<?php require_once 'inc/footer.php';?>
 

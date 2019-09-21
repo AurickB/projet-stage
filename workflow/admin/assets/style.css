@@ -1,13 +1,13 @@
 
 #login .content-wrapper{
     padding-top: 100px;
+    width: 50%;
 }
 
 #login h1{
     text-align: center;
 }
 
-#login form{
-    width: 500px;
-    margin: auto;
-}
+#login .alert ul li{
+    padding: 20px;
+} 
