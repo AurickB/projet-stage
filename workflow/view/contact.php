@@ -1,8 +1,6 @@
 <?php 
 ob_start();
 
-
-
 ?>
 <section id="contact">
     <div class="content-wrapper">
@@ -36,6 +34,7 @@ ob_start();
             <div class="form-group">
                 <label for="inputservice">Sélectionner un praticien</label>
                 <select class="form-control" id="inputservice" name="service">
+                <option selected>Choix...</option>
                 <option value="0">Aurick</option>
                 <option value="1">Béné</option>
                 <option value="2">Céline</option>

@@ -133,7 +133,7 @@ $('#page').pagination({
       let html = template(data);
       $('#data').html(html);
   }
-, pageSize : 2
+, pageSize : 3
 })
 
 // Fonction qui permet de couper une chaine de caractère au premier espace trouvé en fonction de la taille imposée.

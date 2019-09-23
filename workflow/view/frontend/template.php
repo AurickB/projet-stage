@@ -18,14 +18,13 @@
 </head>
 
 <body>
-    <section id="top">
-        <div class="content-wrapper">
-            <nav class="navbar navbar-fixed-top">
+    <section id="top-navbar">
+        <nav class="navbar navbar-fixed-top">
                 <?php 
                 if(isset($_GET['page']) || isset($_GET['page']) === 'actualite' || isset($_GET['page']) === 'contact'){
                 ?>
                 <h1 class="logo"><a href="public.php">
-                        <div>centre <br>paramédical <br><i>les pyrénées - Muret</i></div>
+                        <div>centre <br>médical &<br> paramédical<br><i>les pyrénées - Muret</i></div>
                     </a></h1>
                 <ul class="content">
                     <li class="">
@@ -43,7 +42,7 @@
                 } else {
                     ?>
                 <h1 class="logo"><a href="public.php">
-                        <div>centre <br>paramédical <br><i>les pyrénées - Muret</i></div>
+                        <div>centre <br>médical &<br> paramédical <br><i>les pyrénées - Muret</i></div>
                     </a></h1>
                 <ul class="content">
                     <li class="">
@@ -78,7 +77,7 @@
                 ?>
             </nav>
             <button role="button" type="button" class="menu-toggle" aria-label="navigation">&#9776</button>
-        </div>
+       
     </section>
     <?= $content;?>
 

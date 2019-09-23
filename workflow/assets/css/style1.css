@@ -25,10 +25,9 @@
 }
 
 .navbar .content{
-    width: 80%;
     display: flex;
-    padding-left: 20px;
-    margin: auto;
+    margin: auto 0;
+    padding-right: 1rem;
 }
 
 .navbar .content ul {
@@ -80,9 +79,10 @@
 .logo{
     float: left;
     position: relative;
-    padding-left: 2rem;  
-    margin: auto;  
-    width: 20%;
+    padding-left: 1.4rem;  
+    margin: auto 0;  
+    width: 28%;
+    text-align: left;
 }
 
 .logo a { 
@@ -113,12 +113,6 @@ button:focus{
     border-color: none;
 }
 
-@media screen and (max-width: 1140px) {
-    .navbar .site-name{
-        text-align: left;
-    }
-}
-
 @media screen and (max-width: 960px) {
     .navbar{
         width: 100%;
@@ -128,8 +122,7 @@ button:focus{
     .logo {
         padding-left: 1rem;
         margin-left: 0;
-        text-align: left;
-        width: 200px;
+        width: 220px;
     }
 
     .menu-toggle {
@@ -164,7 +157,7 @@ button:focus{
 
 @media screen and (max-width: 576px){
     .menu-toggle{
-        right:-2rem;
+        right:-3rem;
     }
 }
 
@@ -223,14 +216,7 @@ a#topBotton.visible{
     box-sizing: border-box;
     font-family:'Open-sans',Arial,sans-serif;
     padding: 0 0.6rem;
-    transform: scale(.9);
-    transition: transform .3s;
-}
 
-.accordionItem:hover,
-.accordionItem:focus{
-    transform: scale(.93);
-    padding: 0 0 0 0;
 }
 
 @media screen and (max-width: 576px){
@@ -243,7 +229,7 @@ a#topBotton.visible{
 .accordionItemHeading{
     cursor:pointer;
     height: 200px;
-    margin:0px 0px 10px 0px;
+    margin:0px 0px 20px 0px;
     /* padding:10px; */
     /* background:#2980b9; */
     color:black;
@@ -300,5 +286,4 @@ a#topBotton.visible{
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     background-color: #bdc3c7;
-    color: #233548;
 }

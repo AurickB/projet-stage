@@ -3,7 +3,6 @@ session_start();
 require_once 'inc/functions.php';
 ?>
 
-<div style="padding-top :100px;">
 <?php 
 if (!empty($_POST)){
 
@@ -43,14 +42,13 @@ if (!empty($_POST)){
         // Permet de récupérer l'ID généré par $pdo.
         $user_id = $pdo->lastInsertId(); 
         // Envoie du mail de validation.
-        $mail = mail($_POST['email'], 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttp://localhost:8888/projet_stage/workflow/admin/confirm.php?id=$user_id&token=$token");
-        
+        $mail = mail($_POST['email'], 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien suivant :\n\nhttp://localhost:8888/projet_stage/workflow/admin/confirm.php?id=$user_id&token=$token");
+        $_SESSION['flash']['success']= 'Un email de confirmation vous a été envoyé pour valider votre compte';
         header('Location: login.php');
         exit();
     }
 }
 ?>
-</div>
 
 <?php require_once 'inc/header.php';?>
 
