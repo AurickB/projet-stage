@@ -1,10 +1,5 @@
-<?php 
-// Si il n'y a pas de session ouverte on en démarre une.
-if (session_status() == PHP_SESSION_NONE){
-    session_start();
-}
+<?php?>
 
-?>
 <!DOCTYPE html>
 <html lang="fr">
 

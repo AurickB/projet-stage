@@ -1,6 +1,4 @@
-<?php 
-?>
-
+<?php ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -79,8 +77,6 @@
             <button role="button" type="button" class="menu-toggle" aria-label="navigation">&#9776</button>
        
     </section>
-    <?= $content;?>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/pagination.js"></script>
     <script type="text/javascript" src="assets/script.js"></script>

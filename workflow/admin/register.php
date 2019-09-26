@@ -1,16 +1,12 @@
 <?php 
 session_start();
 require_once 'inc/functions.php';
-?>
 
-<?php 
 if (!empty($_POST)){
-
-    $errors =array();
-
+    $errors=[];
     require_once 'inc/bddConfig.php';
     $pdo = connect();
-
+    // Vérification des erreurs.
     if (empty($_POST['email']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
         $errors['email']= "Votre adresse email n'est pas valide";
     } else {
@@ -21,7 +17,6 @@ if (!empty($_POST)){
         if ($user){
             $errors['email'] = 'Cet email est déjà utilisé';
         }
-
     }
 
     if (empty($_POST['password']) || $_POST['password'] != $_POST['passConfirm'] ){
@@ -39,9 +34,9 @@ if (!empty($_POST)){
             $password,
             $token
         ]);
-        // Permet de récupérer l'ID généré par $pdo.
+        // Permet de récupérer le dernier ID généré par $pdo.
         $user_id = $pdo->lastInsertId(); 
-        // Envoie du mail de validation.
+        // Envoie du mail de validation avec comme paramètre l'id et le token de l'utilisateur.
         $mail = mail($_POST['email'], 'Confirmation de votre compte', "Afin de valider votre compte merci de cliquer sur ce lien suivant :\n\nhttp://localhost:8888/projet_stage/workflow/admin/confirm.php?id=$user_id&token=$token");
         $_SESSION['flash']['success']= 'Un email de confirmation vous a été envoyé pour valider votre compte';
         header('Location: login.php');
@@ -55,6 +50,7 @@ if (!empty($_POST)){
 <section id="login">
     <div class="content-wrapper">
         <h1>S'inscrire</h1>
+        <!-- Affichage des différents messages d'erreurs généré par l'utilisateur -->
         <?php if (!empty($errors)): ?>
         <div class="alert alert-danger">
             <p>Vous n'avez pas rempli le formulaire correctement</p>

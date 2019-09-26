@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 
 // Tableau d'erreurs.
@@ -29,7 +28,7 @@ if(!empty($errors)){
     $_SESSION['errors'] = $errors;
     // On sauvegarde tous les champs renseignés afin de facilité l'utilisation.
     $_SESSION['inputs'] = $_POST;
-    header('Location: ../index.php?page=contact');
+    header('Location: ../public.php?page=contact');
 // Si il n'y a pas d'erreurs on traite les informations.
 } else {
     // Contenu du message.
@@ -38,12 +37,10 @@ if(!empty($errors)){
     $headers = 'FROM: ' . $_POST['email'];
     mail($emails[$_POST['service']], 'Formulaire de contact de ' . $_POST['name'], $message, $headers);
     // On retourne à la page contact
-    header('Location: ../index.php?page=contact');
+    header('Location: ../public.php?page=contact');
     // Envoie de message réussi
     $_SESSION['success']=1;
 }
-var_dump($errors);
 die();
-
 
 ?>

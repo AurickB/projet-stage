@@ -13,9 +13,11 @@ $req = $pdo->prepare('SELECT * FROM user WHERE id = ?');
 $req->execute([$user_id]);
 $user = $req->fetch();
  
-// On vérifie si on a un utilisateur et un token qui correspondent.
+/**
+ * On vérifie si on a un utilisateur et un token qui correspondent.
+ * On permet qu'une utilisation du token.
+ */
 if($user && $user['confirmation_token'] == $token){
-    // On empêche à l'utilisateur d'accéder de nouveau à cette page.
     $req = $pdo->prepare('UPDATE user SET confirmation_token = NULL, confirmed_at = NOW() WHERE id = ?'); 
     $req->execute([$user_id]);
     $_SESSION['flash']['success']= 'Votre compte est confirmé';

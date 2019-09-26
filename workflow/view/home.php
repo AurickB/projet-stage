@@ -1,5 +1,5 @@
 <?php 
-ob_start();
+require_once 'frontend/template.php';
 ?>
 <header id="site-header">
     <!-- Présentation et contact du cabinet -->
@@ -12,7 +12,7 @@ ob_start();
                     <p>Horaires</p>
                     <p>De 9h à 20h</p>
                     <p>Du lundi au vendredi</p>
-                    <button role="button" type="button"><a href="index.php?page=contact">Contactez-nous</a></button>
+                    <button role="button" type="button"><a href="public.php?page=contact">Contactez-nous</a></button>
                 </div>
             </article>
         </div>
@@ -485,14 +485,14 @@ ob_start();
                 <p>Du lundi au vendredi</p>
             </div>
             <div class="other-page">
-                <a href="index.php?page=contact"class="focus"><p>Nous contacter</p></a>
-                <a href="index.php?page=actualite" class="focus"><p>Actualités</p></a>
+                <a href="public.php?page=contact"class="focus"><p>Nous contacter</p></a>
+                <a href="public.php?page=actualite" class="focus"><p>Actualités</p></a>
             </div>
         </div>
     </section>
 </footer>
 <?php 
-$content = ob_get_clean();
 
-require_once 'frontend/template.php';
+
+
 ?>
