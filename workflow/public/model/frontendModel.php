@@ -9,5 +9,13 @@ function getActualite(){
     return $postTotalReq->fetchAll(PDO :: FETCH_ASSOC);
 }
 
+function getPost(){
+    $db = connect();
+    $req = $db->prepare('SELECT * FROM post WHERE id = :id');
+    $req->execute([
+        ':id' => $_GET['id']
+    ]);
 
+    return $posts = $req->fetchAll();
+}
 ?>   

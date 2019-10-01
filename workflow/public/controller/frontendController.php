@@ -11,8 +11,12 @@ function displayContact(){
 }
 
 function displayNew(){
-    $actus = getActualite();
     require 'view/news.php';
+}
+
+function displayPost(){
+    $posts = getPost();
+    require 'view/post.php';
 }
 
 function displayPage(){
@@ -23,7 +27,7 @@ function displayPage(){
             break;
         case 'actualite':
             displayNew();
-            break;
+            break;  
         default:
             displayHome();
             break;

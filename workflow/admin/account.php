@@ -9,20 +9,6 @@ if(!isset($_SESSION['auth'])){
 	header('Location: login.php');
 	// exit();
 }
-
-if (!empty([$_POST])){
-    require_once 'inc/functions.php';
-    require_once 'inc/bddConfig.php';
-    $pdo = connect();
-    $req = $pdo->prepare('INSERT INTO post SET title = ?, content = ?, created_at = NOW()');
-    $req->execute([
-        $_POST['title'],
-        $_POST['content']
-	]);
-	$_SESSION['flash']['success'] = "L'article a bien été créé";
-	// header('Location: ../public.php?page=actualite');
-}
-
 ?>
 
 <h1>Bienvenue <?= $_SESSION['auth']['email']?></h1>
@@ -30,7 +16,7 @@ if (!empty([$_POST])){
 <?//php debug($_SESSION);?>
 
 <div class="container">
-	<form action="" method="post" enctype="multipart/form-data" class="">
+	<form action="post_account.php" method="post" enctype="multipart/form-data" class="">
 		<div class="form-group">
 			<label for="title">Titre</label>
 			<input class="form-control" id="title" type="text" name="title">
@@ -45,8 +31,11 @@ if (!empty([$_POST])){
 				<input id="img" type="file" name="img" style="width : 100%;">
 			</div>
 		</div>
-		<button type="submit" class="btn btn-primary">Créer un article</button>
+		<button type="submit" name="envoi_form" class="btn btn-primary">Créer un article</button>
+		<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+			<input type="hidden" name="randomformOK" value="<?php echo $_SESSION['randomOk']; ?>" />
+		</form>
 	</form>
 </div>
 
-<?php require 'inc/footer.php'?>
+<?php require 'inc/footer.php';?>

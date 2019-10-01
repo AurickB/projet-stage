@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'frontend/template.php';
+require_once 'frontend/header.php';
 ?>
 <section id="contact">
 	<div class="content-wrapper">
@@ -52,4 +52,5 @@ require_once 'frontend/template.php';
 unset($_SESSION['inputs']);
 unset($_SESSION['success']);
 unset($_SESSION['errors']);
+require_once 'frontend/footer.php';
 ?>

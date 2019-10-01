@@ -52,10 +52,8 @@ displayScrollMenu();
 function scrollTo() {
   // Au clic sur un lien possédant la class "js-scrollTo".
   $('.js-scrollTo').on('click', function () {
-    if (
-      location.hostname == this.hostname
-      && this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
-    ) {
+    if (location.hostname == this.hostname 
+      && this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")){
       // Enregistrement de l'attribut href dans la variable target.
       let target = $(this).attr('href');
       /**
@@ -65,7 +63,6 @@ function scrollTo() {
       $('html, body').stop().animate({ scrollTop: $(target).offset().top }, 'slow');
       return false;
     }
-
   });
 }
 scrollTo();
@@ -87,7 +84,7 @@ topBotton("topBotton");
 function template(data){
   let output ='';
   output += '<section id="actualite">';
-  output +='<div class="content-wrapper">';
+  output += '<div class="content-wrapper">';
   output += '<h1 class="page-header">Actualités</h1>';
   output += '<div class="item-list">';
   output += '<ul class="">';
@@ -98,9 +95,9 @@ function template(data){
     output +=  '<div class="date-actus">' + element.created_at + '</div>';
     output +=  '<p>Cabinet Les Pyrénnées - Actualites</p>';
     output +=  '</div>';
-    output +=  '<div class="titre-actus"><h2>' + element.title + '</h2></div>';
+    output +=  '<div class="titre-actus"><h1>' + element.title + '</h1></div>';
     output +=  '<div class="content-actus"><p>' + excerpt(element.content) + '</p></div>';
-    output +=  '<div class="btn-actu"><a href="#"><p>voir</p></a></div>';
+    output +=  '<div class="btn-actu"><a href="public.php?page=post&id=' + element.id + '"><p>Lire plus</p></a></div>';
     output +=  '</div>';
     output +=  '</li>';
     

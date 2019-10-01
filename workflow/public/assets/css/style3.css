@@ -130,11 +130,14 @@
     color: #233548;
     border: 1px solid #233548;
     border-radius: 5px;
-    padding: 0px 20px;
-    text-transform: uppercase;
+    padding: 0px 10px;
     font-size: 0.867em;
     font-family: 'raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+#actualite .btn-actu p{
+    padding: 3px 0 3px 0;
 }
 
 #actualite .btn-actu a:hover,
