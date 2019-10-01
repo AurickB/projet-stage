@@ -12,9 +12,9 @@ ob_start();
                     <p>Horaires</p>
                     <p>De 9h à 20h</p>
                     <p>Du lundi au vendredi</p>
-                    <button role="button" type="button"><a href="public.php?page=contact">Contactez-nous</a></button>
                 </div>
             </article>
+            <div class="btn"><a href="public.php?page=contact">Contactez-nous</a></div>
         </div>
     </section>
 </header>
@@ -26,8 +26,8 @@ ob_start();
                 <!-- Présentation practicien -->
                 <div class="container">
                     <h1 class="text-align-center">Ostéopathe</h1>
-                    <button class="" role="button" type="button"><a href="#contact-osteopathe"
-                            class="js-scrollTo">Contactez-moi</a></button>
+                    <div class="btn" ><a href="#contact-osteopathe"
+                            class="js-scrollTo">Contactez-moi</a></div>
                     <!-- Photo -->
                     <div class="presentation">
                         <div class="">
@@ -87,11 +87,11 @@ ob_start();
                         <div class="accordionItemContent">
                             <p>Dès les 1er jours de sa vie, bébé peut être pris en charge pas un ostéopathe pédiatrique
                             </p>
-                            <button role="button" type="button"><a
+                            <div class="btn"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
-                                    rendez-vous en ligne</a></button>
-                            <button class="bloc-align-center " role="button" type="button"><a href="#contact-osteopathe"
-                                    class="js-scrollTo">Contactez-moi</a></button>
+                                    rendez-vous en ligne</a></div>
+                            <div class="btn"><a href="#contact-osteopathe"
+                                    class="js-scrollTo">Contactez-moi</a></div>
                         </div>
                     </div>
                     <!-- Posturologie clinique -->
@@ -107,11 +107,11 @@ ob_start();
                         </div>
                         <div class="accordionItemContent">
                             <p>En lien avec l'ostéopathie, la posture permet une prise en charge complémentaire</p>
-                            <button role="button" type="button"><a
-                                    href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">prendre
-                                    rendez-vous en ligne</a></button>
-                            <button class="bloc-align-center " role="button" type="button"><a href="#contact-osteopathe"
-                                    class="js-scrollTo">Contactez-moi</a></button>
+                            <div class="btn"><a
+                                    href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
+                                    rendez-vous en ligne</a></div>
+                            <div class="btn"><a href="#contact-osteopathe"
+                                    class="js-scrollTo">Contactez-moi</a></div>
                         </div>
                     </div>
                     <!-- Ostéoparthie sportif -->
@@ -127,11 +127,11 @@ ob_start();
                         </div>
                         <div class="accordionItemContent">
                             <p>Atteingnez votre objectif grâce au suivi d'un expert dans le domaine du sportif</p>
-                            <button role="button" type="button"><a
+                            <div class="btn"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
-                                    rendez-vous en ligne</a></button>
-                            <button class="bloc-align-center " role="button" type="button"><a href="#contact-osteopathe"
-                                    class="js-scrollTo">Contactez-moi</a></button>
+                                    rendez-vous en ligne</a></div>
+                            <div class="btn"><a href="#contact-osteopathe"
+                                    class="js-scrollTo">Contactez-moi</a></div>
                         </div>
                     </div>
                     <!-- Micronutrition -->
@@ -148,12 +148,11 @@ ob_start();
                         <div class="accordionItemContent">
                             <p>La médecine nutritionnelle a comme finalité la santé du patient en optimisant les
                                 fonctions des cellules, tissus et organes.</p>
-                            <button role="button" type="button"><a
-                                    href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">prendre
-                                    rendez-vous en ligne
-                                </a></button>
-                            <button class="bloc-align-center " role="button" type="button"><a href="#contact-osteopathe"
-                                    class="js-scrollTo">Contactez-moi</a></button>
+                            <div class="btn"><a
+                                    href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
+                                    rendez-vous en ligne</a></div>
+                            <div class="btn"><a href="#contact-osteopathe"
+                                    class="js-scrollTo">Contactez-moi</a></div>
                         </div>
                     </div>
                 </div>
@@ -171,10 +170,10 @@ ob_start();
                     <p>
                         <a href="https://www.osteopt.site" target="_blank" class="focus">www.osteopt.site</a>
                     </p>
-                    <button role="button" type="button"><a
+                    <div class="btn"><a
                             href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino" target="_blank">Prendre
                             rendez-vous sur
-                            doctolib</a></button>
+                            doctolib</a></div>
                 </div>
             </article>
         </div>
@@ -186,8 +185,8 @@ ob_start();
                 <!-- Présentation practicien -->
                 <div class="container">
                     <h1 class="text-align-center">Infirmiers liberaux</h1>
-                    <button role="button" type="button"><a href="#contact-infirmier"
-                            class="js-scrollTo">Contactez-nous</a></button>
+                    <div class="btn"><a href="#contact-infirmier"
+                            class="js-scrollTo">Contactez-nous</a></div>
                     <!-- Photo -->
                     <div class="presentation">
                         <div class="">
@@ -330,8 +329,8 @@ ob_start();
                     <div class="bgimg-1">
                         <div class="">
                             <h1 class="text-align-center">Sage-Femme</h1>
-                            <button role="button" type="button"><a href="#contact-sage-femme"
-                                    class="js-scrollTo">Contactez-moi</a></button>
+                            <div class="btn"><a href="#contact-sage-femme"
+                                    class="js-scrollTo">Contactez-moi</a></div>
                             <!-- Photo -->
                             <div class="presentation">
                                 <div class="">
@@ -373,11 +372,11 @@ ob_start();
                                     <p><img src="view/images/logo-email.png" alt=""
                                             class="logo-email">eleonore.helle@hotmail.fr</p>
                                 </a>
-                                <button role="button" type="button"><a
+                                <div class="btn"><a
                                         href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle"
                                         target="_blank">Prendre
                                         rendez-vous sur
-                                        doctolib</a></button>
+                                        doctolib</a></div>
                         </div>
                     </div>
                     <div class="bgimg-1">
@@ -444,10 +443,10 @@ ob_start();
                             </p>
                         </a>
                         <a href="https://www.muret-sage-femme.com" target="_blank" class="focus">www.muret-sage-femme.com</a>
-                        <button role="button" type="button"><a
+                        <div class=btn><a
                                 href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle" target="_blank">Prendre
                                 rendez-vous sur
-                                doctolib</a></button>
+                                doctolib</a></div>
                 </div>
             </article>
         </div>

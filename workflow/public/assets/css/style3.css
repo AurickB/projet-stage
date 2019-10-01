@@ -1,35 +1,50 @@
 
 
-/* <------ contact déco ------> */
+/* <------ contact-form déco ------> */
 
-#contact{
+#contact-form{
     width: 1000px;
     margin: auto;
 }
 
-
-#contact .content-wrapper{
+#contact-form .content-wrapper{
     margin: 0 8%;
     padding-top: 8rem;
 }
 
 @media screen and (max-width: 992px){
-    #contact{
+    #contact-form{
         width: 100%;
         margin: auto;
     }
 }
 
-#contact .page-header{
+#contact-form .page-header{
     font-weight: bold;
     font-size: 2.1333em;
 
 }
 
-
-#contact textarea{
+#contact-form textarea{
     width: 100%;
     height: 100px;
+}
+
+#contact-form .btn{
+    color: #233548;
+    border: 1px solid #233548;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 0.867em;
+    font-family: 'raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+#contact-form .btn.btn:hover,
+#contact-form .btn.btn:focus{
+    background-color: #233548;
+    border-color: #233548;
+    color: #fff;
 }
 
 .form-group {
@@ -80,7 +95,6 @@
     background-color: #d4edda;
     border-color: #c3e6cb;
 }
-
 
 /* <------ actu déco ------> */
 

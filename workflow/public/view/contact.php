@@ -2,7 +2,7 @@
 session_start();
 require_once 'frontend/header.php';
 ?>
-<section id="contact">
+<section id="contact-form">
 	<div class="content-wrapper">
 	<h1 class="page-header">Contact</h1>
 		<?php if(isset($_SESSION['errors'])):
@@ -43,7 +43,7 @@ require_once 'frontend/header.php';
 				<label for="inputcontent">Votre message</label>
 				<textarea class="form-control" id="inputcontent" name="content"><?= isset(($_SESSION['inputs']['content'])) ? $_SESSION['inputs']['content'] : ''; ?></textarea>
 			</div>
-			<button type="submit" class="btn btn-primary">Envoyer</button>
+			<button type="submit" class="btn">Envoyer</button>
 		</form>
 	</div>
 </section>

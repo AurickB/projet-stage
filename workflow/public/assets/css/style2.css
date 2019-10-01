@@ -28,30 +28,33 @@ a{
     color: black;
 }
 
-button{
+.btn{
+    width: max-content;
+    margin: 1.4rem auto;
+}
+
+.btn a{
+    display: inline-block;
+    color: #233548;
+    border: 1px solid #233548;
     border-radius: 5px;
-    width: 200px;
-    height: auto;
-    padding: 15px;
-    text-align: center;
-    margin: 20px auto 40px auto;
-    display: block;
-    border-color: #233548;
-    font-weight: 700;
+    padding: 10px 10px;
     font-size: 0.867em;
     font-family: 'raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
 }
 
-button:hover,
-button:focus{
+.btn a:hover,
+.btn a:focus{
     background-color: #233548;
     border-color: #233548;
+    color: #fff;
 }
 
-button:hover a,
-button:focus a{
+/* .btn:hover a,
+.btn:focus a{
     color: #f2f2f2;
-}
+} */
 
 h1 {
     font-size: 2.2rem;
@@ -165,12 +168,13 @@ main section:nth-child(4){
 
 #site-header article{
     padding: 8rem 0 0 0;
-    width: 600px;
+    width: 100%;
     margin: auto;
 }
 
-#site-header button{
-    margin-top: 1.8rem;
+#site-header .btn a{
+    background-color: #233548;
+    color: #fff;
 }
 
 
@@ -412,28 +416,31 @@ main section:nth-child(4){
     color: #914a3a;
 }
 
-#sage-femme button{
+#sage-femme .btn a{
     border-color: #914a3a;
+    color:#914a3a;
 }
 
-#sage-femme button:hover,
-button:focus{
+#sage-femme .btn a:hover,
+.btn a:focus{
     background-color: #914a3a;
     border-color: #914a3a;
 }
 
-#sage-femme #contact-sage-femme button{
+#sage-femme #contact-sage-femme .btn a{
+    color: #233548;
     border-color: #233548;
 }
 
-#sage-femme #contact-sage-femme button:hover,
-button:focus{
+#sage-femme #contact-sage-femme .btn a:hover,
+.btn a:focus{
+    color: #f2f2f2;
     background-color: #233548;
     border-color: #233548;
 }
 
-#sage-femme button:hover a,
-button:focus a{
+#sage-femme .btn:hover a,
+.btn:focus a{
     color: #f2f2f2;
 }
 
@@ -499,8 +506,8 @@ button:focus a{
     height: 100%;
 }
 
-#sage-femme .bgimg-1 button,
-.bgimg-2 button{
+#sage-femme .bgimg-1 .btn,
+.bgimg-2 .btn{
     position: sticky;
 }
 

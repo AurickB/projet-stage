@@ -6,7 +6,7 @@
     text-align: center;
     display: flex;
     z-index: 2; 
-    height: 90px;
+    height: auto;
     color: #fff;
 }
 
@@ -27,7 +27,7 @@
 .navbar .content{
     display: flex;
     margin: auto 0;
-    padding-right: 1rem;
+    padding-right: 2rem;
 }
 
 .navbar .content ul {
@@ -83,6 +83,7 @@
     margin: auto 0;  
     width: 28%;
     text-align: left;
+    margin: 10px;
 }
 
 .logo a { 
@@ -152,12 +153,6 @@ button:focus{
     }
     .navbar .content.is-opened {
         transform: translateY(0);
-    }
-}
-
-@media screen and (max-width: 576px){
-    .menu-toggle{
-        right:-3rem;
     }
 }
 
