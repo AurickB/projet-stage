@@ -121,7 +121,7 @@ main section:nth-child(4){
 }
 
 .contact-position{
-    padding-top: 7rem;
+    padding: 7rem 0 2rem 0;
 }
 
 .presentation{
@@ -289,6 +289,10 @@ main section:nth-child(4){
     #osteopathe .content-wrapper{
         margin: 0 2%;
     }
+
+    #osteopathe .presentation-item-content p{
+        text-align: justify;
+    }
 }
 
 /* <------ infirmier déco ------> */
@@ -312,11 +316,16 @@ main section:nth-child(4){
 }
 
 #infirmier .presentation div:nth-child(1),
-#infirmier .presentation div:nth-child(2){
-    width: 50%;
-    background-color: #ffffff;
-    margin: 10px;
+#infirmier .presentation div:nth-child(2),
+#infirmier .presentation div:nth-child(3){
+    width: 33.33333333%;
     border-radius: 6px;
+    margin: 0 10px;
+}
+
+#contact-infirmier .presentation div:nth-child(1),
+#contact-infirmier .presentation div:nth-child(3){
+    background-color: #ffffff;
 }
 
 #infirmier .accordionItemContent .presentation{
@@ -394,6 +403,10 @@ main section:nth-child(4){
 
     #infirmier .presentation-item-content {
         width: 100%
+    }
+
+    #infirmier .presentation-item-content p{
+        text-align: justify;
     }
 
     #infirmier .presentation-item img{
@@ -476,7 +489,7 @@ main section:nth-child(4){
 #sage-femme .certification:before {
     content: "";
     left: 10px;
-    right: 67%;
+    right: 72%;
     height: 2px;
     background: #914a3a;
     position: absolute;
@@ -485,7 +498,7 @@ main section:nth-child(4){
 
 #sage-femme .certification::after {
     content: "";
-    left: 67%;
+    left: 72%;
     right: 10px;
     height: 2px;
     background: #914a3a;
@@ -515,15 +528,16 @@ main section:nth-child(4){
     text-align: center;
     padding: 20px;
     font-size: 1.5rem;
+    color: #26292c;
 }
 
 #sage-femme .bgimg-2{
     background-image: url("../../view/images/sage-femme-parallax-img2.jpg");
-    height: 40vh;
+    height: 100%;
 }
 
 #sage-femme .bgimg-2 .contact-position{
-    padding-top: 4rem;;
+    padding: 4rem 0;
 }
 
 #sage-femme .bgimg-1, .bgimg-2{
@@ -554,10 +568,10 @@ main section:nth-child(4){
 #sage-femme .soin-item .soin-item-content{
     width: 50%;
     text-align: center;
+    padding: 0 10px;
 }
 
 #sage-femme .soin-item .soin-item-content p{
-    width: 300px;
     margin: auto;
 }
 
@@ -572,6 +586,10 @@ main section:nth-child(4){
     
     #sage-femme .content-wrapper{
         margin: 0 2%;
+    }
+
+    #sage-femme  .presentation-item-content p{
+        text-align: justify;
     }
 }
 
@@ -589,6 +607,63 @@ main section:nth-child(4){
     }    
 }
 
+/* <------ psychologue déco ------> */
+
+#psychologue .content-wrapper{
+    margin: 0 8%;
+}
+
+#psychologue .container{
+    background-color: #ffffff;
+}
+
+#psychologue .container h1:nth-child(3){
+    padding-bottom: 40px;
+}
+
+#psychologue .presentation{
+    margin-bottom: 1.4rem;
+}
+
+#psychologue .presentation-item .public{
+    width: 300px;
+    color: #f2f2f2;
+    background-color: #26292c;
+    border: thick double white;
+    text-align: center;
+    margin: 30px auto;
+}
+
+#psychologue .presentation-item img{
+    width: 45%;
+    padding: 0 0 0 10px;
+    margin-top: 15px;
+    float: right;
+    
+}
+
+@media screen and (max-width: 992px){
+    #psychologue .presentation-item img{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        float: none;
+    }
+
+    #psychologue .presentation-item-content p{
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 576px){
+    #psychologue .presentation-item .public{
+        width: 100%;
+    }
+}
+
+
+
 /* <------ footer déco ------> */
 
 #site-footer{
@@ -604,8 +679,8 @@ main section:nth-child(4){
 
 #site-footer iframe{
     width: 50%;
-    height: 350px;
-    padding: 10px
+    height: 400px;
+    padding: 3%;
 }
 
 #site-footer .text-align-center{

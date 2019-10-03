@@ -22,12 +22,11 @@ ob_start();
     <!-- Section Ostéopathe -->
     <section id="osteopathe" class="osteopathe">
         <div class="content-wrapper">
-            <article>
-                <!-- Présentation practicien -->
+            <article class="">
+                <!-- Présentation praticien -->
                 <div class="container">
                     <h1 class="text-align-center">Ostéopathe</h1>
-                    <div class="btn" ><a href="#contact-osteopathe"
-                            class="js-scrollTo">Contactez-moi</a></div>
+                    <div class="btn"><a href="#contact-osteopathe" class="js-scrollTo">Contactez-moi</a></div>
                     <!-- Photo -->
                     <div class="presentation">
                         <div class="">
@@ -90,8 +89,7 @@ ob_start();
                             <div class="btn"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
                                     rendez-vous en ligne</a></div>
-                            <div class="btn"><a href="#contact-osteopathe"
-                                    class="js-scrollTo">Contactez-moi</a></div>
+                            <div class="btn"><a href="#contact-osteopathe" class="js-scrollTo">Contactez-moi</a></div>
                         </div>
                     </div>
                     <!-- Posturologie clinique -->
@@ -110,8 +108,7 @@ ob_start();
                             <div class="btn"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
                                     rendez-vous en ligne</a></div>
-                            <div class="btn"><a href="#contact-osteopathe"
-                                    class="js-scrollTo">Contactez-moi</a></div>
+                            <div class="btn"><a href="#contact-osteopathe" class="js-scrollTo">Contactez-moi</a></div>
                         </div>
                     </div>
                     <!-- Ostéoparthie sportif -->
@@ -130,8 +127,7 @@ ob_start();
                             <div class="btn"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
                                     rendez-vous en ligne</a></div>
-                            <div class="btn"><a href="#contact-osteopathe"
-                                    class="js-scrollTo">Contactez-moi</a></div>
+                            <div class="btn"><a href="#contact-osteopathe" class="js-scrollTo">Contactez-moi</a></div>
                         </div>
                     </div>
                     <!-- Micronutrition -->
@@ -151,8 +147,7 @@ ob_start();
                             <div class="btn"><a
                                     href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino">Prendre
                                     rendez-vous en ligne</a></div>
-                            <div class="btn"><a href="#contact-osteopathe"
-                                    class="js-scrollTo">Contactez-moi</a></div>
+                            <div class="btn"><a href="#contact-osteopathe" class="js-scrollTo">Contactez-moi</a></div>
                         </div>
                     </div>
                 </div>
@@ -170,8 +165,8 @@ ob_start();
                     <p>
                         <a href="https://www.osteopt.site" target="_blank" class="focus">www.osteopt.site</a>
                     </p>
-                    <div class="btn"><a
-                            href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino" target="_blank">Prendre
+                    <div class="btn"><a href="https://www.doctolib.fr/osteopathe/eaunes/pierre-travostino"
+                            target="_blank">Prendre
                             rendez-vous sur
                             doctolib</a></div>
                 </div>
@@ -181,13 +176,11 @@ ob_start();
     <!-- Section Infirmière -->
     <section id="infirmier" class="infirmier">
         <div class="content-wrapper">
-            <article>
-                <!-- Présentation practicien -->
+            <article class="">
+                <!-- Présentation praticien -->
                 <div class="container">
                     <h1 class="text-align-center">Infirmiers liberaux</h1>
-                    <div class="btn"><a href="#contact-infirmier"
-                            class="js-scrollTo">Contactez-nous</a></div>
-                    <!-- Photo -->
+                    <div class="btn"><a href="#contact-infirmier" class="js-scrollTo">Contactez-nous</a></div>
                     <div class="presentation">
                         <div class="">
                             <img src="" alt="photo infirmier" width="" height="">
@@ -197,6 +190,11 @@ ob_start();
                         <div class="">
                             <img src="" alt="photo infirmier" width="" height="">
                             <h2>Michel Camboulives</h2>
+                            <p>Infiermier D.E (Diplômé d'État)</p>
+                        </div>
+                        <div class="">
+                            <img src="" alt="photo infirmier" width="" height="">
+                            <h2>Céline Papy</h2>
                             <p>Infiermier D.E (Diplômé d'État)</p>
                         </div>
                     </div>
@@ -312,7 +310,17 @@ ob_start();
                             </a>
                             <a href="mailto:m_camboulives@orange.fr">
                                 <p><img src="view/images/logo-email.png" alt=""
-                                        class="logo-email">m_camboulives@orange.fr</p>
+                                    class="logo-email">m_camboulives@orange.fr</p>
+                            </a>
+                        </div>
+                        <div>
+                            <p>céline Papy</p>
+                            <a href="tel:+3368087731">
+                                <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0668 08 77 31</p>
+                            </a>
+                            <a href="mailto:celine-papy@hotmail.fr">
+                                <p><img src="view/images/logo-email.png" alt="" class="logo-email">celine-papy@hotmail.fr
+                                </p>
                             </a>
                         </div>
                     </div>
@@ -324,13 +332,12 @@ ob_start();
     <section id="sage-femme" class="">
         <div class="content-wrapper">
             <article class="">
-                <!-- Présentation practicien -->
+                <!-- Présentation praticien -->
                 <div class="container">
                     <div class="bgimg-1">
                         <div class="">
                             <h1 class="text-align-center">Sage-Femme</h1>
-                            <div class="btn"><a href="#contact-sage-femme"
-                                    class="js-scrollTo">Contactez-moi</a></div>
+                            <div class="btn"><a href="#contact-sage-femme" class="js-scrollTo">Contactez-moi</a></div>
                             <!-- Photo -->
                             <div class="presentation">
                                 <div class="">
@@ -342,8 +349,7 @@ ob_start();
                             </div>
                             <!-- Certification -->
                             <div class="certification">
-                                <p> Sage-femme Diplômés d'État en excercice libéral & conventionné, inscrits à l'ordre
-                                    infirmier
+                                <p> Sage-femme Diplômés d'État en excercice libéral & conventionné
                                 </p>
                             </div>
                             <!-- Presentation -->
@@ -364,6 +370,8 @@ ob_start();
                     </div>
                     <div class="bgimg-2">
                         <div id="" class="text-align-center contact-position">
+                            <p>Consultation au cabinet ou à domicile</p>
+                            <p>Sur rendez-vous</p>
                             <a href="tel:+33666562519">
                                 <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0666 56 25 19</p>
                             </a>
@@ -372,8 +380,7 @@ ob_start();
                                     <p><img src="view/images/logo-email.png" alt=""
                                             class="logo-email">eleonore.helle@hotmail.fr</p>
                                 </a>
-                                <div class="btn"><a
-                                        href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle"
+                                <div class="btn"><a href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle"
                                         target="_blank">Prendre
                                         rendez-vous sur
                                         doctolib</a></div>
@@ -442,21 +449,60 @@ ob_start();
                             <p><img src="view/images/logo-email.png" alt="" class="logo-email">eleonore.helle@hotmail.fr
                             </p>
                         </a>
-                        <a href="https://www.muret-sage-femme.com" target="_blank" class="focus">www.muret-sage-femme.com</a>
-                        <div class=btn><a
-                                href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle" target="_blank">Prendre
+                        <a href="https://www.muret-sage-femme.com" target="_blank"
+                            class="focus">www.muret-sage-femme.com</a>
+                        <div class=btn><a href="https://www.doctolib.fr/sage-femme/muret/eleonore-helle"
+                                target="_blank">Prendre
                                 rendez-vous sur
-                                doctolib</a></div>
+                                doctolib</a>
+                        </div>
                 </div>
             </article>
         </div>
     </section>
     <!-- Section Psychologue -->
     <section id="psychologue" class="">
-        <div class="">
+        <div class="content-wrapper">
             <article class="">
-                <h1>Psychologue</h1>
-                <p>à venir ...</p>
+                <!-- Présentation praticien -->
+                <div class="container">
+                    <div class="text-align-center">
+                        <h1 class="">Psychologue<br>Psychologue clinicienne <br>Psychothérapeute</h1>
+                    </div>
+                    <div class="btn"><a href="#contact-psychologue" class="js-scrollTo">Contactez-moi</a></div>
+                    <div class="presentation">
+                        <div class="">
+                            <img src="" alt="photo psychologue" width="" height="">
+                            <h2>Marie Scaldaferro</h2>
+                            <p>Psychologue Diplôme D’Études Supérieures Spécialisées</p>
+                        </div>
+                    </div>
+                    <!-- Presentation -->
+                    <div class="presentation-item">
+                        <div class="public">
+                            <p> Enfants - Adolescents - Adultes - Couples - Familles
+                            </p>
+                        </div>
+                        <div class="presentation-item-content">
+                            <img class="presentation-item-logo" src="view/images/psychologue-inside.jpg" alt="photo interieur cabinet">
+                            <p>Psychologue clinicienne, et psychothérapeute, je reçois à mon cabinet bébés, enfants, adolescents, adultes, couples et familles.<br><br>Vous pouvez me rencontrer afin d'aborder vos problématiques et vos symptômes. Grâce au travail de psychothérapie que vous pouvez mener avec mon soutien, vous aurez la possibilité d'aborder différentes thématiques afin de les traverser puis de les dépasser.<br><br>Voici des exemples de thématiques pour lesquelles vous pouvez me rencontrer:<br><br>L'<b>anxiété</b> ou le <b>stress</b>, des <b>angoisses</b> ou <b>phobies</b>, une <b>dépression</b>, un <b>deuil</b>, une <b>guidance parentale</b>, des <b>troubles du comportement</b>, des <b>difficultés ou des troubles dans les apprentissages scolaires</b> (<i>bilan psychologique et psychométrique WISC 4 et test de Rorschach</i>), la <b>gestion de ses émotions</b>, des <b>difficultés professionnelles</b>, des <b>problèmes de couple</b>, des <b>difficultés de communication ou de relation familiale</b>, des <b>troubles alimentaires</b>, des <b>addictions</b> etc .....<br><br>En tant que psychologue je vous propose une écoute bienveillante et un soutien afin de mieux vous comprendre et ainsi de vous permettre de trouver vos solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Psychologue -->
+                <div id="contact-psychologue" class="text-align-center contact-position">
+                    <p>Consultation au cabinet ou à domicile</p>
+                    <p>Sur rendez-vous</p>
+                    <p>Pour plus de renseignements contactez moi au</p>
+                    <a href="tel:+33616231590">
+                        <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">06 16 23 15 90
+                        </p>
+                    </a>
+                    <a href="mailto:m.scafont@yahoo.fr">
+                        <p style="margin-bottom: 0;"><img src="view/images/logo-email.png" alt="" class="logo-email">m.scafont@yahoo.fr
+                        </p>
+                    </a>                
+                </div>
             </article>
         </div>
     </section>

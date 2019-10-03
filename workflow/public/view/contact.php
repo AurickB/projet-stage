@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once 'frontend/header.php';
 ?>
 <section id="contact-form">
@@ -31,12 +30,21 @@ require_once 'frontend/header.php';
 				<input type="text" class="form-control" id="inputname" name="name" value="<?= isset(($_SESSION['inputs']['name'])) ? $_SESSION['inputs']['name'] : ''; ?>">
 			</div>
 			<div class="form-group">
+				<label for="inputphone">Votre numéro de téléphone</label>
+				<input type="text" class="form-control" id="inputphone" name="phone" spellcheck="false" value="<?= isset(($_SESSION['inputs']['phone'])) ? $_SESSION['inputs']['phone'] : ''; ?>" placeholder="Format accepté : 06 01 02 03 04, 0601020304, 06-01-02-03-04, 06.01.02.03.04">
+				<small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre numéro de téléphone avec qui que ce soit d'autre.</small>
+			</div>
+			<div class="form-group">
 				<label for="inputservice">Sélectionner un praticien</label>
 				<select class="form-control" id="inputservice" name="service">
 				<option selected>Choix...</option>
-				<option value="0">Aurick</option>
-				<option value="1">Béné</option>
-				<option value="2">Céline</option>
+				<option value="0">Osthépathe</option>
+				<option value="1">Infirmière - Jacquin</option>
+				<option value="2">Infirmier - Camboulives</option>
+				<option value="3">Infirmière - Papy</option>
+				<option value="4">Sage-Femme</option>
+				<option value="5">Psychologue</option>
+				<option value="6">Réflexologue</option>
 				</select>
 			</div>
 			<div class="form-group">
@@ -49,8 +57,14 @@ require_once 'frontend/header.php';
 </section>
 <?php 
 // Suppression des informations
-unset($_SESSION['inputs']);
-unset($_SESSION['success']);
-unset($_SESSION['errors']);
+if(isset($_SESSION['errors'])){
+	unset($_SESSION['inputs']);
+}
+if(isset($_SESSION['errors'])){
+	unset($_SESSION['success']);
+}
+if(isset($_SESSION['errors'])){
+	unset($_SESSION['errors']);
+}
 require_once 'frontend/footer.php';
 ?>
