@@ -51,11 +51,6 @@ a{
     color: #fff;
 }
 
-/* .btn:hover a,
-.btn:focus a{
-    color: #f2f2f2;
-} */
-
 h1 {
     font-size: 2.2rem;
     padding: 40px 0 40px 0;
@@ -258,9 +253,9 @@ main section:nth-child(4){
 }
 
 #osteopathe .nourisson{
-    background-image: url("../../view/images/osteopathie-nourissons.jpg");
+    background-image: url("../../view/images/nourisson2.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: right;
 }
 
 #osteopathe .accordionWrapper .posologie{
@@ -320,12 +315,13 @@ main section:nth-child(4){
 #infirmier .presentation div:nth-child(3){
     width: 33.33333333%;
     border-radius: 6px;
-    margin: 0 10px;
+    padding: 0 10px;
 }
 
 #contact-infirmier .presentation div:nth-child(1),
 #contact-infirmier .presentation div:nth-child(3){
-    background-color: #ffffff;
+    background-color: #fff;
+    box-shadow: 5px 5px 11px -6px rgba(71, 70, 70, 0.829);
 }
 
 #infirmier .accordionItemContent .presentation{
@@ -392,7 +388,8 @@ main section:nth-child(4){
         width: 100%;
     }
     #infirmier .presentation div:nth-child(1),
-    #infirmier .presentation div:nth-child(2){
+    #infirmier .presentation div:nth-child(2),
+    #infirmier .presentation div:nth-child(3){
         width: 100%;
         margin: 10px auto;
     }
@@ -514,6 +511,10 @@ main section:nth-child(4){
     z-index: 1;
 }
 
+#sage-femme .presentation-item .presentation-item-content p{
+    text-align: center;
+}
+
 #sage-femme .bgimg-1{
     background-image: url("../../view/images/sage-femme-parallax-img1.jpg");
     height: 100%;
@@ -588,7 +589,7 @@ main section:nth-child(4){
         margin: 0 2%;
     }
 
-    #sage-femme  .presentation-item-content p{
+    #sage-femme  .presentation-item .presentation-item-content p{
         text-align: justify;
     }
 }
@@ -625,7 +626,7 @@ main section:nth-child(4){
     margin-bottom: 1.4rem;
 }
 
-#psychologue .presentation-item .public{
+#psychologue .patient{
     width: 300px;
     color: #f2f2f2;
     background-color: #26292c;

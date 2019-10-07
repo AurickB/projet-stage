@@ -3,7 +3,7 @@ session_start();
 
 // Tableau d'erreurs.
 $errors=[]; 
-$emails=['travostinopierre@gmail.com', 'bene.j31@gmail.com','m_camboulives@orange.fr','celine-papy@hotmail.fr','eleonore.helle@hotmail.fr','m.scafont@yahoo.fr','corentin.reflexologie@gmail.com'];
+$emails=['travostinopierre@gmail.com', 'bene.j31@gmail.com','m_camboulives@orange.fr','celine-papy@hotmail.fr','eleonore.helle@hotmail.fr','m.scafont@yahoo.fr','corentin.reflexologie@gmail.com', 'aurickbelenus@gmail.com'];
 
 // Vérification des informations contenues dans le formulaire.
 if(!isset($_POST['name']) || $_POST['name'] == ''){
@@ -44,11 +44,13 @@ if(!empty($errors)){
     header('Location: ../public.php?page=contact');
 // Si il n'y a pas d'erreurs on traite les informations.
 } else {
+    // Expéditeur du message.
+    $to = $emails[$_POST['service']];
+    // Sujet
+    $subject = 'Formulaire de contact de ' . $_POST['name'];
     // Contenu du message.
     $message = $_POST['content'];
-    // Expéditeur du message.
-    $headers = 'FROM: ' . $_POST['email'] . ' ' .$telephone;
-    mail($emails[$_POST['service']], 'Formulaire de contact de ' . $_POST['name'], $message, $headers);
+    mail($to, $subject, $message);
     // On retourne à la page contact
     header('Location: ../public.php?page=contact');
     // Envoie de message réussi

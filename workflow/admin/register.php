@@ -1,5 +1,5 @@
-<?php 
-require_once 'inc/header.php';
+<?php
+session_start();
 require_once 'inc/functions.php';
 
 if (!empty($_POST)){
@@ -44,6 +44,8 @@ if (!empty($_POST)){
     }
 }
 ?>
+
+<?php require_once 'inc/header.php';?>
 
 <section id="login">
     <div class="content-wrapper">

@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centre médical et paramédical regroupant ostéopathe, infirmiers libéraux, sage-femme, psychologue et réflexologue">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <base href="/url_rewriting/"> -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -76,4 +77,3 @@
             </nav>
             <button role="button" type="button" class="menu-toggle" aria-label="navigation">&#9776</button>
     </section>
-    <?= $content;?>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'inc/header.php';
 
 // On vérifie si le compte existe uniquement si l'utilisateur a entré les informations.
@@ -27,8 +28,6 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     }
 }
 ?>
-
-
 <h1>Se connecter</h1>
 <form action='' method='post'>
     <div class="form-group">

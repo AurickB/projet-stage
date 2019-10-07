@@ -200,25 +200,12 @@ a#topBotton.visible{
     /* box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2); */
 }
 
-@media screen and (max-width: 576px){
-    .accordionWrapper{
-        flex-direction: column;
-    }
-}
-
 .accordionItem{
     width:50%;
     box-sizing: border-box;
     font-family:'Open-sans',Arial,sans-serif;
     padding: 0 0.6rem;
 
-}
-
-@media screen and (max-width: 576px){
-    .accordionItem{
-        width: 100%;
-        padding: 0;
-    }
 }
 
 .accordionItemHeading{
@@ -262,6 +249,7 @@ a#topBotton.visible{
     display:block;
 
 }
+
 .open .accordionItemContent{
     padding: 20px;
     background-color: #fff;
@@ -281,4 +269,21 @@ a#topBotton.visible{
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     background-color: #bdc3c7;
+}
+
+@media screen and (max-width: 576px){
+    .accordionWrapper{
+        flex-direction: column;
+    }
+
+    .accordionItem{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .accordionItemContent p{
+        text-align: justify;
+    }
 }

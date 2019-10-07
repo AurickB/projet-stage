@@ -11,8 +11,8 @@ require_once 'frontend/header.php';
 			<?= implode('<br>', $_SESSION['errors']); ?>
 		</div>
 		<?php endif; ?>
-		<?php if(isset($_SESSION['success'])): 
-		// Si il y a une erreurs on affiche le message.   
+		<?php if(isset($_SESSION['success'])==1): 
+		// Si le message est envoyé sans erreur.   
 		?>
 		<div class="alert alert-success">
 			<p>Votre message a bien été envoyé</p>
@@ -45,6 +45,7 @@ require_once 'frontend/header.php';
 				<option value="4">Sage-Femme</option>
 				<option value="5">Psychologue</option>
 				<option value="6">Réflexologue</option>
+				<option value="7">Test</option>
 				</select>
 			</div>
 			<div class="form-group">
@@ -57,10 +58,10 @@ require_once 'frontend/header.php';
 </section>
 <?php 
 // Suppression des informations
-if(isset($_SESSION['errors'])){
+if(isset($_SESSION['inputs'])){
 	unset($_SESSION['inputs']);
 }
-if(isset($_SESSION['errors'])){
+if(isset($_SESSION['success'])){
 	unset($_SESSION['success']);
 }
 if(isset($_SESSION['errors'])){

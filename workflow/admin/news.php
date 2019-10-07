@@ -1,6 +1,8 @@
-<?php 
+<?php
+session_start(); 
 require_once 'inc/header.php';
 require_once 'inc/bddConfig.php';
+
 
 $pdo = connect();
 // On met dans une variable le nombre d'article que l'on veut par page.

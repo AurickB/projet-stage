@@ -1,12 +1,6 @@
-<?php
-if(session_status()==PHP_SESSION_NONE){
-    session_start();
-}
-?>
-
+<?php?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +10,9 @@ if(session_status()==PHP_SESSION_NONE){
     <link rel="stylesheet" href="assets/style.css">
     <title>Administration</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="logout.php">Administation</a>
+        <a class="navbar-brand" href="account.php">Administation</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,15 +36,14 @@ if(session_status()==PHP_SESSION_NONE){
             </ul>
         </div>
     </nav>
-
     <div class="container">
-
-        <?php if (isset($_SESSION['flash'])): ?>
+    <?php
+    if (isset($_SESSION['flash'])): ?>
         <?php  foreach ($_SESSION['flash'] as $type => $message) : ?>
-        <div class="alert alert-<?= $type;?>">
-            <?= $message?>;
-        </div>
+            <div class="alert alert-<?= $type;?>">
+                <?= $message?>;
+            </div>
         <?php endforeach; ?>
-        <!-- On supprime les messages d'erreur -->
+    <!-- On supprime les messages d'erreur -->
         <?php unset($_SESSION['flash']); ?>
-        <?php endif; ?>
+    <?php endif; ?>

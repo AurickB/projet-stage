@@ -1,15 +1,15 @@
 <?php
-require 'inc/functions.php';
-require 'inc/header.php';
-
+session_start();
+require_once 'inc/functions.php';
+require_once 'inc/header.php';
 // On empêche l'accès à la page account.php si l'utilisateur ne s'est pas connecté avec ses identifiants.
 if(!isset($_SESSION['auth'])){
     $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'être sur cette page. Veuillez vous connecter";
 	header('Location: login.php');
-	// exit();
 }
 ?>
 
+<?php ?>
 <h1>Bienvenue <?= $_SESSION['auth']['email']?></h1>
 
 <?//php debug($_SESSION);?>
