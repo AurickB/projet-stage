@@ -14,7 +14,7 @@ require_once 'frontend/header.php';
                     <p>Du lundi au vendredi</p>
                 </div>
             </article>
-            <div class="btn"><a href="public.php?page=contact">Contactez-nous</a></div>
+            <div class="btn"><a href="index.php?page=contact">Contactez-nous</a></div>
         </div>
     </section>
 </header>
@@ -25,7 +25,7 @@ require_once 'frontend/header.php';
             <article class="">
                 <!-- Présentation praticien -->
                 <div class="container">
-                    <h1 class="text-align-center">Ostéopathe</h1>
+                    <h1 class="text-align-center" role="tablist">Ostéopathe</h1>
                     <div class="btn"><a href="#contact-osteopathe" class="js-scrollTo">Contactez-moi</a></div>
                     <!-- Photo -->
                     <div class="presentation">
@@ -193,24 +193,7 @@ require_once 'frontend/header.php';
                     <!-- Presentation -->
                     <div class="presentation-item">
                         <div class="presentation-item-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui
-                                laboriosam
-                                animi
-                                ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi reiciendis.
-                                Quidem
-                                voluptas dolore possimus?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui
-                                laboriosam
-                                animi
-                                ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi reiciendis.
-                                Quidem
-                                voluptas dolore possimus?</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi qui
-                                laboriosam
-                                animi
-                                ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi reiciendis.
-                                Quidem
-                                voluptas dolore possimus?</p>
+                            <p>Fort de 15 ans d'expérience notre équipe de 3 infirmiers libéraux, vous accueille dans son cabinet situé à Muret.<br><br>Exerçant dans tout le secteur Sud de Muret, Estantens, Eaunes, Ox, Seysses. vos infirmiers sont à votre disposition pour prodiguer tous les soins (<b>courant</b>, <b>spécifique</b> et <b>infirmiers à domicile</b>) dont vous en avez le besoin.<br><br>Vos infirmiers peuvent intervenir le matin à partir de 7h jusqu'au soir 20h.<br><br>N'hésitez pas à nous joindre afin de prendre <a href="#contact-infirmier" class="js-scrollTo"><b><u>rendez-vous</u></b></a>, et de profiter des soins les plus adaptés.
                         </div>
                         <img class="presentation-item-logo" src="view/images/infirmier-logo.jpg" alt="">
                     </div>
@@ -228,7 +211,7 @@ require_once 'frontend/header.php';
                             </div>
                         </div>
                         <div class="accordionItemContent">
-                            <p>L'équipe est à votre disposition pour tous les soins courants dont vous pouvez avoir besoin : toilettes, pansements à refaire quotidiennement pour veiller à la bonne cicatrisation d'une plaie, prise de constantes, injections intraveineuses, intradermiques ou intramusculaires, mais aussi prélèvements sanguins.<br><br>Faites appel à cette équiepe d'infirmièrs libérales à domicile pour tous soins infirmiers courants.<br><br>Tous les actes prodigués sont répertoriés dans la nomenclature générale des Actes des professionnels infirmiers (NGAP) et peuvent faire l'objet d'un remboursement de la sécurité sociale s'ils ont fait l'objet d'une prescription de la part d'un médecin.</p>
+                            <p>L'équipe est à votre disposition pour tous les soins courants dont vous pouvez avoir besoin : toilettes, nursing, pansements à refaire quotidiennement pour veiller à la bonne cicatrisation d'une plaie, prise de constantes, mais aussi prélèvements sanguins...<br><br>Faites appel à cette équipe d'infirmiers libérales pour tous vos soins infirmier à domicile.<br><br>Tous les actes prodigués sont répertoriés dans la nomenclature générale des Actes des professionnels infirmiers (NGAP) et sont conventionnés par l'assurance maladie. Ainsi il peuvent faire l'objet d'un remboursement de la part des mutelles et de la sécurité sociale, s'ils ont été l'objet d'une prescription de la part d'un médecin.</p>
                             <div class="btn"><a href="#contact-infirmier" class="js-scrollTo">Contactez-nous</a></div>
                         </div>
                     </div>
@@ -243,14 +226,14 @@ require_once 'frontend/header.php';
                             </div>
                         </div>
                         <div class="accordionItemContent">
-                            <p>Votre équipe d'infirmiers à domicile est également sensibilisée au suivi des patients souffrant de diabète.<br><br>Pour les suivre au mieux et prodiguer des soins infirmiers spécifiques au diabète de type 1 ou 2, l'équipe maîtrise les spécificités de cette pathologie et saura réagir face aux problèmes de glycémie qui peuvent survenir à tout instant.<br><br>Habilitée à effectuer tous les gestes nécessaires à la réalisation des soins prescrits pour le médecin, vous apprécierez la disponibilité et le sérieux de notre équipe.</p>
+                            <p>Votre équipe d'infirmiers à domicile est sensibilisée pour tout ce concerne les injections (intraveineuses, intradermiques, intramusculaires et sous-cutanées), les ablations de chimiothérapie ainsi que la pose et l'ablation de perfusions.<br><br>Par ailleurs l'équipe est également compétente pour le suivi des patients souffrant de diabète.<br>Afin de vous suivre au mieux et de vous prodiguer les soins spécifiques au diabète de type 1 ou 2, l'équipe maîtrise les spécificités de cette pathologie et saura réagir face aux problèmes qui peuvent survenir à tout instant.<br><br>De plus, nous somme habilités à effectuer tous les gestes et des soins prescrits pour le médecin.<br><br>Vous apprécierez notre disponibilité et notre sérieux.</p>
                             <div class="btn"><a href="#contact-infirmier" class="js-scrollTo">Contactez-nous</a></div>
                         </div>
                     </div>
                 </div>
                 <!-- Contact Infirmier -->
                 <div id="contact-infirmier" class="text-align-center contact-position">
-                    <p>Consultation au cabinet</p>
+                    <p>Consultation à domicile</p>
                     <p>Sur rendez-vous</p>
                     <p>Pour plus de renseignements contactez nous au</p>
                     <div class="presentation">
@@ -316,14 +299,7 @@ require_once 'frontend/header.php';
                             <!-- Presentation -->
                             <div class="presentation-item">
                                 <div class="presentation-item-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reiciendis quasi
-                                        qui
-                                        laboriosam
-                                        animi
-                                        ducimus soluta doloribus nobis! Impedit tempore magni libero nostrum ad modi
-                                        reiciendis.
-                                        Quidem
-                                        voluptas dolore possimus?</p>
+                                    <p>La sage femme libérale assure les consultations de grossesse, la préparation à la naissance, le suivi et retour à domicile. Elle pratique également le suivis gynécologique et la contraception.</p>
                                 </div>
                                 <img class="presentation-item-logo" src="" alt="">
                             </div>
@@ -400,7 +376,7 @@ require_once 'frontend/header.php';
                 </div>
                 <!-- Contact Sage-Femme -->
                 <div id="contact-sage-femme" class="text-align-center contact-position">
-                    <p>Consultation au cabinet</p>
+                    <p>Consultation au cabinet ou à domicile</p>
                     <p>Sur rendez-vous</p>
                     <a href="tel:+33666562519">
                         <p><img src="view/images/logo-telephone.png" alt="" class="logo-phone">0666 56 25 19</p>

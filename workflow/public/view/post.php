@@ -1,8 +1,7 @@
-<?php require_once 'frontend/header.php';?>
+<?php
+require_once 'frontend/header.php';?>
 
-<?php 
-echo 'hello';
-
+<?php
 echo '<section id="actualite">';
 echo '<div class="content-wrapper">';
 echo '<h1 class="page-header">Actualités</h1>';
@@ -17,7 +16,7 @@ foreach($posts as $post) {
   echo  '</div>';
   echo  '<div class="titre-actus"><h1>' . $post['title'] . '</h1></div>';
   echo  '<div class="content-actus"><p>' . $post['content']. '</p></div>';
-  echo  '<div class="btn-actu"><a href="public.php?page=actualite"><p>Retour</p></a></div>';
+  echo  '<div class="btn-actu"><a href="index.php?page=actualite"><p>Retour</p></a></div>';
   echo  '</div>';
   echo  '</li>';
 };

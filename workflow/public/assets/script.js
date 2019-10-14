@@ -88,20 +88,23 @@ function template(data){
   output += '<h1 class="page-header">Actualités</h1>';
   output += '<div class="item-list">';
   output += '<ul class="">';
-  data.forEach( element => {
-    output +=  '<li class="">';
-    output +=  '<div class="zone-actu">';
-    output +=  '<div class="update-actu">';
-    output +=  '<div class="date-actus">' + element.created_at + '</div>';
-    output +=  '<p>Cabinet Les Pyrénnées - Actualites</p>';
-    output +=  '</div>';
-    output +=  '<div class="titre-actus"><h1>' + element.title + '</h1></div>';
-    output +=  '<div class="content-actus"><p>' + excerpt(element.content) + '</p></div>';
-    output +=  '<div class="btn-actu"><a href="public.php?page=post&id=' + element.id + '"><p>Lire plus</p></a></div>';
-    output +=  '</div>';
-    output +=  '</li>';
-    
-  });
+  if (data.length === 0){ // Si la table est vide...
+    output += '<p style="height: 163px;">à venir...</p>';
+  } else {
+    data.forEach( element => { // ...sinon
+      output +=  '<li class="">';
+      output +=  '<div class="zone-actu">';
+      output +=  '<div class="update-actu">';
+      output +=  '<div class="date-actus">' + element.created_at + '</div>';
+      output +=  '<div><p>Cabinet Les Pyrénnées - Actualites</p>';
+      output +=  '</div>';
+      output +=  '<div class="titre-actus"><h1>' + element.title + '</h1></div>';
+      output +=  '<div class="content-actus"><p>' + excerpt(element.content) + '</p></div>';
+      output +=  '<div class="btn-actu"><a href="index.php?page=post&id=' + element.id + '"><p>Lire plus</p></a></div>';
+      output +=  '</div>';
+      output +=  '</li>';
+    });
+  }
   output += '</ul>';
   output +='</div>';
   output +='</div>';

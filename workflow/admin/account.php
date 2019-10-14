@@ -7,6 +7,9 @@ if(!isset($_SESSION['auth'])){
     $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'être sur cette page. Veuillez vous connecter";
 	header('Location: login.php');
 }
+
+debug($_SESSION['auth']);
+debug($_SESSION['auth'][3]);
 ?>
 
 <?php ?>

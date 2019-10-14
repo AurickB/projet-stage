@@ -26,19 +26,25 @@ $limit = ($pageActuelle-1)*$postParPage;
 $req = $pdo->query("SELECT * FROM post ORDER BY created_at DESC LIMIT $limit,$postParPage");
 $posts = $req->fetchAll();
 
+require_once 'inc/functions.php';
+debug($posts);
+
 /**
  * Disposition des articles.
  */
 
 echo '<section id=postAdmin>';
 echo '<div class="container">';
-foreach ($posts as $post) {
+if (empty($posts)){
+    echo '</br></br></br><p>aucun article, la base de données est vide...</p>';
+}
+foreach ($posts as $post){
     // if ($post['img'] != null){
     //     echo '<div><img src="view/images/' . $travel['img'] . '"></div></br></br>' ;
     // }
     echo '<h2>' . $post['title'] . '</h2></br>';
     echo '<p>' . $post['content'] . '</p></br>';
-    echo '<a href="news.php?idpost='.$post['id'].'&page=delete">Supprimer article</a><br>';
+    echo '<a href="news.php?idpost='.$post['id']. '&page=delete">Supprimer article</a><br>';
     echo '<br>';
 }
 echo '</div>';

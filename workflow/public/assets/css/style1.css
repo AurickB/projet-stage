@@ -234,13 +234,13 @@ a#topBotton.visible{
 
 .accordion-head-content .link{
     display: flex;
-    padding-top: 90px;
+    padding-top: 80px;
     color: #fff;
     margin-left: -20px;
     background-image: linear-gradient(-180deg, rgba(0,0,0, 0) 53%, #000 100%);
     z-index: 1;
     position: relative;
-    top: 11px;
+    top: 15px;
 }
 
 .close .accordionItemContent{

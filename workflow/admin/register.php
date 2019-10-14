@@ -25,13 +25,14 @@ if (!empty($_POST)){
 
     // Si il n'y a pas d'erreur on ajoute l'utilisateur à la base de données.
     if (empty($errors)){
-        $req = $pdo->prepare("INSERT INTO user SET email = ?, password = ?, confirmation_token = ?");
+        $req = $pdo->prepare("INSERT INTO user SET email = ?, password = ?, service = ?, confirmation_token = ?");
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         // Déclaration d'un indentificateur d'une longueur de 60 caractère.
         $token = str_random(60);
         $req->execute ([
             $_POST['email'], 
             $password,
+            $_POST['service'],
             $token
         ]);
         // Permet de récupérer le dernier ID généré par $pdo.
@@ -78,6 +79,17 @@ if (!empty($_POST)){
                 <label for="ConfirmPassword">Confirmer votre mot de passe</label>
                 <input type="password" class="form-control" name='passConfirm' id="ConfirmPassword" placeholder="Password">
             </div>
+            <div class="form-group">
+				<label for="inputservice">Sélectionner un service</label>
+				<select class="form-control" id="inputservice" name="service">
+				<option selected>Choix...</option>
+				<option value="Osthépathe">Osthépathe</option>
+				<option value="Infirmier">Infirmier</option>
+				<option value="Sage-Femme">Sage-Femme</option>
+				<option value="Psychologue">Psychologue</option>
+				<option value="Reflexologue">Reflexologue</option>
+				</select>
+			</div>
             <button type="submit" class="btn btn-primary">M'inscrire </button>
         </form>
     </div>

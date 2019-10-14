@@ -4,9 +4,18 @@ require_once 'bddConfig.php';
 function getActualite(){
     $db = connect();
 
-    $postTotalReq= $db -> query ('SELECT * FROM post ORDER BY created_at DESC');
+    $req= $db -> query ('SELECT * FROM post ORDER BY created_at DESC');
     
-    return $postTotalReq->fetchAll(PDO :: FETCH_ASSOC);
+    return $req->fetchAll(PDO :: FETCH_ASSOC);
+}
+
+
+function getService(){
+    $db = connect();
+
+    $req= $db -> query ('SELECT * FROM user');
+    
+    return $req->fetchAll(PDO :: FETCH_ASSOC);
 }
 
 function getPost(){

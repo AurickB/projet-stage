@@ -45,7 +45,6 @@ require_once 'frontend/header.php';
 				<option value="4">Sage-Femme</option>
 				<option value="5">Psychologue</option>
 				<option value="6">Réflexologue</option>
-				<option value="7">Test</option>
 				</select>
 			</div>
 			<div class="form-group">

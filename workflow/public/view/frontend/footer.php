@@ -11,15 +11,14 @@
                     <p>Du lundi au vendredi</p>
                 </div>
                 <div class="other-page">
-                    <a href="public.php?page=contact"class="focus"><p>Nous contacter</p></a>
-                    <a href="public.php?page=actualite" class="focus"><p>Actualités</p></a>
+                    <a href="index.php?page=contact"class="focus"><p>Nous contacter</p></a>
+                    <a href="index.php?page=actualite" class="focus"><p>Actualités</p></a>
+                    <a href="#" class="focus"><p>Mentions Légales</p></a>
                 </div>
             </div>
+            <div class="text-align-center">Ce site tient compte de la Charte relative à la création de site internet par les infirmiers, des article R.4312-69, R.4312-76 et R.4312-50 du Code de la Santé Publique.</div>
         </section>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js">
-        lazyload();
-    </script>    
+    </footer>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/pagination.js"></script>
     <script type="text/javascript" src="assets/script.js"></script>    

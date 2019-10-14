@@ -22,30 +22,30 @@
                 <?php 
                 if(isset($_GET['page']) || isset($_GET['page']) === 'actualite' || isset($_GET['page']) === 'contact'){
                 ?>
-                <h1 class="logo"><a href="public.php">
+                <h1 class="logo"><a href="index.php">
                         <div>centre <br>médical &<br> paramédical<br><i>les pyrénées - Muret</i></div>
                     </a></h1>
                 <ul class="content">
                     <li class="">
-                        <a href="public.php">
+                        <a href="index.php">
                             <h1>accueil</h1>
                         </a></li>
                     <li class="">
-                        <a href="public.php?page=actualite">
+                        <a href="index.php?page=actualite">
                             <h1>actualités</h1>
                         </a></li>
                     <li class="">
-                        <a href="public.php?page=contact">contact</a></li>
+                        <a href="index.php?page=contact">contact</a></li>
                 </ul>
                 <?php
                 } else {
                     ?>
-                <h1 class="logo"><a href="public.php">
+                <h1 class="logo"><a href="index.php">
                         <div>centre <br>médical &<br> paramédical <br><i>les pyrénées - Muret</i></div>
                     </a></h1>
                 <ul class="content">
                     <li class="">
-                        <a href="public.php?page=actualite">
+                        <a href="index.php?page=actualite">
                             <h1>actualités</h1>
                         </a></li>
                     <li class="">
@@ -69,7 +69,7 @@
                             <h1>reflexologue</h1>
                         </a></li>
                     <li class="">
-                        <a href="public.php?page=contact">contact</a></li>
+                        <a href="index.php?page=contact">contact</a></li>
                 </ul>
                 <?php
                 }

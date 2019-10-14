@@ -5,9 +5,10 @@ session_start();
 if (isset($_POST['envoi_form']) 
 	&& $_POST['randomformOK']==$_SESSION['randomOk'] ){
     require_once 'inc/functions.php';
-    require_once 'inc/bddConfig.php';
+	require_once 'inc/bddConfig.php';
+	$id_user = $_SESSION['auth']['id'];
     $pdo = connect();
-    $req = $pdo->prepare('INSERT INTO post SET title = ?, content = ?, created_at = NOW()');
+    $req = $pdo->prepare("INSERT INTO post SET title = ?, content = ?, created_at = NOW(), id_user = $id_user");
     $req->execute([
         $_POST['title'],
         $_POST['content']

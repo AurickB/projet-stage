@@ -12,5 +12,4 @@ if (isset($_GET['page']) && $_GET['page'] == 'post'){
 } else {
     displayHome();
 }
-
 ?>

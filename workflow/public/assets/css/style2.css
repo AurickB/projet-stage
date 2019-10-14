@@ -265,7 +265,7 @@ main section:nth-child(4){
 }
 
 #osteopathe .accordionWrapper .sport{
-    background-image: url("../../view/images/osteopathie-sportjpg.jpg");
+    background-image: url("../../view/images/osteo-sport.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -311,11 +311,16 @@ main section:nth-child(4){
 }
 
 #infirmier .presentation div:nth-child(1),
-#infirmier .presentation div:nth-child(2),
 #infirmier .presentation div:nth-child(3){
     width: 33.33333333%;
     border-radius: 6px;
     padding: 0 10px;
+}
+
+#infirmier .presentation div:nth-child(2){
+    width: 33.33333333%;
+    border-radius: 6px;
+    padding: 0 5px;
 }
 
 #contact-infirmier .presentation div:nth-child(1),
@@ -370,7 +375,7 @@ main section:nth-child(4){
 }
 
 #infirmier .soin-courant{
-    background-image: url("../../view/images/infirmer-soin-courant.png");
+    background-image: url("../../view/images/infirmier-soin-courant2.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -568,7 +573,7 @@ main section:nth-child(4){
 
 #sage-femme .soin-item .soin-item-content{
     width: 50%;
-    text-align: center;
+    text-align: initial;
     padding: 0 10px;
 }
 
@@ -590,6 +595,10 @@ main section:nth-child(4){
     }
 
     #sage-femme  .presentation-item .presentation-item-content p{
+        text-align: justify;
+    }
+
+    #sage-femme .soin-item .soin-item-content{
         text-align: justify;
     }
 }
@@ -693,7 +702,7 @@ main section:nth-child(4){
     display: flex;
     margin: 15px auto;
     justify-content: space-around;
-    width: 400px;
+    width: 600px;
 }
 
 #site-footer .other-page p,
