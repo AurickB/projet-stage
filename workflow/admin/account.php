@@ -9,7 +9,6 @@ if(!isset($_SESSION['auth'])){
 }
 
 debug($_SESSION['auth']);
-debug($_SESSION['auth'][3]);
 ?>
 
 <?php ?>

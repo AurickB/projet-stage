@@ -11,7 +11,7 @@ if (!empty($_POST)){
         $errors['email']= "Votre adresse email n'est pas valide";
     } else {
         // On vérifie si l'email n'est pas déjà utilisé pour un autre compte.
-        $req = $pdo->prepare('SELECT id FROM user WHERE email = ?');
+        $req = $pdo->prepare('SELECT id_user FROM users WHERE email = ?');
         $req->execute([$_POST['email']]);
         $user = $req -> fetch(); 
         if ($user){
@@ -25,7 +25,7 @@ if (!empty($_POST)){
 
     // Si il n'y a pas d'erreur on ajoute l'utilisateur à la base de données.
     if (empty($errors)){
-        $req = $pdo->prepare("INSERT INTO user SET email = ?, password = ?, service = ?, confirmation_token = ?");
+        $req = $pdo->prepare("INSERT INTO users SET email = ?, password = ?, service = ?, confirmation_token = ?");
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         // Déclaration d'un indentificateur d'une longueur de 60 caractère.
         $token = str_random(60);

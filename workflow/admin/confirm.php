@@ -8,7 +8,7 @@ $token = $_GET['token'];
 require_once 'inc/bddConfig.php';
 
 $pdo = connect();
-$req = $pdo->prepare('SELECT * FROM user WHERE id = ?');
+$req = $pdo->prepare('SELECT * FROM users WHERE id_user = ?');
 // On excute la requete avec l'id de l'utilisateur en paramètre.
 $req->execute([$user_id]);
 $user = $req->fetch();
@@ -18,7 +18,7 @@ $user = $req->fetch();
  * On permet qu'une utilisation du token.
  */
 if($user && $user['confirmation_token'] == $token){
-    $req = $pdo->prepare('UPDATE user SET confirmation_token = NULL, confirmed_at = NOW() WHERE id = ?'); 
+    $req = $pdo->prepare('UPDATE users SET confirmation_token = NULL, confirmed_at = NOW() WHERE id_user = ?'); 
     $req->execute([$user_id]);
     $_SESSION['flash']['success']= 'Votre compte est confirmé';
     $_SESSION['auth'] = $user;

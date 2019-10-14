@@ -96,11 +96,11 @@ function template(data){
       output +=  '<div class="zone-actu">';
       output +=  '<div class="update-actu">';
       output +=  '<div class="date-actus">' + element.created_at + '</div>';
-      output +=  '<div><p>Cabinet Les Pyrénnées - Actualites</p>';
+      output +=  '<div><p>Cabinet Les Pyrénnées - Actualites - '+ element.service +'</p>';
       output +=  '</div>';
       output +=  '<div class="titre-actus"><h1>' + element.title + '</h1></div>';
       output +=  '<div class="content-actus"><p>' + excerpt(element.content) + '</p></div>';
-      output +=  '<div class="btn-actu"><a href="index.php?page=post&id=' + element.id + '"><p>Lire plus</p></a></div>';
+      output +=  '<div class="btn-actu"><a href="index.php?page=post&id=' + element.id_post + '"><p>Lire plus</p></a></div>';
       output +=  '</div>';
       output +=  '</li>';
     });

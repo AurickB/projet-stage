@@ -8,7 +8,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     require_once 'inc/bddConfig.php';
     $pdo = connect();
     // Avant la connexion on vérifie si l'utilisateur a bien valider son compte
-    $req = $pdo->prepare('SELECT * FROM user WHERE email = :email AND confirmed_at IS NOT NULL');
+    $req = $pdo->prepare('SELECT * FROM users WHERE email = :email AND confirmed_at IS NOT NULL');
     $req->execute(['email' => $_POST['email']]);
     $user = $req->fetch();
     // On vérifie si le mot de passe entré par l'utilisateur est le même que celui présent dans la base de données.
@@ -18,7 +18,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
         // Création des cookies
         if (isset($_POST['remember'])){
             $remenber_token = str_random(250);
-            $pdo->prepare('UPDATE user SET rermenber_token = ? WHERE id = ?')->execute([$remenber_token, $user['id']]);
+            $pdo->prepare('UPDATE users SET rermenber_token = ? WHERE id_user = ?')->execute([$remenber_token, $user['id']]);
             setcookie('remember', $remenber_token . sha1($user['id'] . 'totolelapin'), time() + 60 * 20);
         }
         header('Location: account.php');

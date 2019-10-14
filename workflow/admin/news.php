@@ -8,7 +8,7 @@ $pdo = connect();
 // On met dans une variable le nombre d'article que l'on veut par page.
 $postParPage = 3;
 // On récupère tout les article
-$postTotalReq = $pdo->query('SELECT id FROM post');
+$postTotalReq = $pdo->query('SELECT id_post FROM posts');
 $postTotal = $postTotalReq->rowCount();
 // On compte le nombre de page total.
 $pageTotale = ceil($postTotal/$postParPage);
@@ -23,7 +23,7 @@ if (isset($_GET['page']) && !empty($_GET['page']) && $_GET['page'] > 0 && $_GET[
 $limit = ($pageActuelle-1)*$postParPage;
 
 
-$req = $pdo->query("SELECT * FROM post ORDER BY created_at DESC LIMIT $limit,$postParPage");
+$req = $pdo->query("SELECT * FROM posts JOIN users ON posts.id_user = users.id_user ORDER BY created_at DESC LIMIT $limit,$postParPage");
 $posts = $req->fetchAll();
 
 require_once 'inc/functions.php';
@@ -44,7 +44,7 @@ foreach ($posts as $post){
     // }
     echo '<h2>' . $post['title'] . '</h2></br>';
     echo '<p>' . $post['content'] . '</p></br>';
-    echo '<a href="news.php?idpost='.$post['id']. '&page=delete">Supprimer article</a><br>';
+    echo '<a href="news.php?idpost='.$post['id_post']. '&page=delete">Supprimer article</a><br>';
     echo '<br>';
 }
 echo '</div>';

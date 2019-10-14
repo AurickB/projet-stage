@@ -20,7 +20,7 @@ function deletePost($id){
     require_once 'inc/bddConfig.php';
 	$pdo = connect();
 
-	$req='DELETE FROM post WHERE id = "'.$id.'"';
+	$req='DELETE FROM posts WHERE id_post = "'.$id.'"';
 
 	$request = $pdo->prepare($req);
 
