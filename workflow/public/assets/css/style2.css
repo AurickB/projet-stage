@@ -10,7 +10,8 @@ html,
 body{
     padding: 0;
     margin: 0;
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-family:'Open Sans', sans-serif;
+
 }
 
 .content-wrapper {
@@ -40,7 +41,7 @@ a{
     border-radius: 5px;
     padding: 10px 10px;
     font-size: 0.867em;
-    font-family: 'raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
 }
 

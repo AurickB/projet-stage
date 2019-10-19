@@ -1,9 +1,28 @@
 <?php 
-session_start();
+if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
+    session_start([
+        'cookie_lifetime' => 86400,
+    ]);
+}
 
-// On envoie les données récupérées dans le formilaire dans la base de données avec une technique pour empêcher le renvoi du formulaire par actualisation de la page.
-if (isset($_POST['envoi_form']) 
-	&& $_POST['randomformOK']==$_SESSION['randomOk'] ){
+$errors=[];
+
+if(!isset($_POST['title']) || $_POST['title'] == ''){
+	$errors['title'] = 'Vous n\'avez pas renseigné de titre';
+}
+
+if(!isset($_POST['content']) || $_POST['content'] == ''){
+	$errors['content'] = 'Vous n\'avez pas renseigné de contenu';
+}
+
+if (!empty($errors)){
+	// On envoie le tableau qui contient les erreurs.
+    $_SESSION['errors'] = $errors;
+    // On sauvegarde tous les champs renseignés afin de facilité l'utilisation.
+    $_SESSION['inputs'] = $_POST;
+    header('Location: account.php');
+} else if (isset($_POST['envoi_form']) 
+	&& $_POST['randomformOK']==$_SESSION['randomOk']){ // On envoie les données récupérées dans le formulaire dans la base de données avec une technique pour empêcher le renvoi du formulaire par actualisation de la page.
     require_once 'inc/functions.php';
 	require_once 'inc/bddConfig.php';
 	$id_user = $_SESSION['auth']['id_user'];
@@ -21,6 +40,6 @@ if (isset($_POST['envoi_form'])
 	 * Il est mis dans un input hidden du formulaire => il sera alors récupéré via $_POST['randomformOK'].
 	 * Si on recharge la page $_SESSION['randomOk'] est modifié mais $_POST['randomformOK'] non.
 	 */
-    header('Location: account.php');
+    header('Location: news.php');
 }
 ?>

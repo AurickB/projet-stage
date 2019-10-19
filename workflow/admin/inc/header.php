@@ -1,4 +1,10 @@
-<?php?>
+<?php
+if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
+    session_start([
+        'cookie_lifetime' => 86400,
+    ]);
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

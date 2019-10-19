@@ -1,11 +1,33 @@
 <?php
-session_start();
+if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
+    session_start([
+        'cookie_lifetime' => 86400,
+    ]);
+}
 require_once 'inc/header.php';
+require_once 'inc/bddConfig.php'; 
+
+// On permet de conserver le cookie malgrés la suppression de la session si l'utilisateur a cliquer le bouton "Se souvenir de moi"
+if (isset($_COOKIE['remember'])){
+    $remember_token = $_COOKIE['remember']; 
+    $array = explode("==", $remember_token);
+    $user_id = $array[0];
+    $pdo = connect();
+    $req = $pdo->prepare('SELECT * FROM users WHERE id_user = ?');
+    $req->execute([$user_id]);
+    $user = $req->fetch();
+    if ($user){
+        $expected = $user_id . '==' . $user['remember_token'] . sha1($user_id . 'totolelapin');
+        if ($expected == $remember_token){
+            $_SESSION['auth'] = $user;
+            header('Location: account.php');  
+        }
+    }
+}
 
 // On vérifie si le compte existe uniquement si l'utilisateur a entré les informations.
 if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     require_once 'inc/functions.php';
-    require_once 'inc/bddConfig.php';
     $pdo = connect();
     // Avant la connexion on vérifie si l'utilisateur a bien valider son compte
     $req = $pdo->prepare('SELECT * FROM users WHERE email = :email AND confirmed_at IS NOT NULL');
@@ -16,12 +38,12 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
         $_SESSION['auth'] = $user;
         $_SESSION['flash']['success'] = "Vous êtes bien connecté";
         // Création des cookies
-        if (isset($_POST['remember'])){
-            $remenber_token = str_random(250);
-            $pdo->prepare('UPDATE users SET rermenber_token = ? WHERE id_user = ?')->execute([$remenber_token, $user['id']]);
-            setcookie('remember', $remenber_token . sha1($user['id'] . 'totolelapin'), time() + 60 * 20);
+        if ($_POST['remember']){ 
+            $remember_token = str_random(250);
+            $pdo->prepare('UPDATE users SET remember_token = ? WHERE id_user = ?')->execute([$remember_token, $user['id_user']]);
+            setcookie('remember', $user['id_user'] . '==' . $remember_token . sha1($user['id_user'] . 'totolelapin'), time() + 60 * 60 * 24 * 7);
         }
-        header('Location: account.php');
+        header('Location: account.php'); 
         exit();
     } else {
         $_SESSION['flash']['danger'] = "Identifiant ou mot de passe incorrect";
@@ -33,11 +55,11 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     <div class="form-group">
         <label for="InputEmail">Email</label>
         <input type="text" class="form-control" name='email' id="InputEmail" aria-describedby="emailHelp"
-            placeholder="Enter email">
+            placeholder="Entrer votre email">
     </div>
     <div class="form-group">
         <label for="InputPassword">Mot de passe <a href="forget.php">(Mot de passe oublié)</a></label>
-        <input type="password" class="form-control" name='password' id="InputPassword" placeholder="Password">
+        <input type="password" class="form-control" name='password' id="InputPassword" placeholder="Entrer votre mot de passe">
     </div>
     <div class="form-group pb-2">
         <label>

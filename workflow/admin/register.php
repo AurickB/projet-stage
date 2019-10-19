@@ -1,25 +1,42 @@
 <?php
-session_start();
+if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
+    session_start([
+        'cookie_lifetime' => 86400,
+    ]);
+}
 require_once 'inc/functions.php';
+
+// test : je veux récupérer les utilisateur
+//require_once 'inc/config.php';
+
+
+// $db = App::getDatabase();
+// $user = $db->query('SELECT * FROM users', [1])->fetch();
+// debug($user);
+// die();
 
 if (!empty($_POST)){
     $errors=[];
     require_once 'inc/bddConfig.php';
+    require_once 'class/Database.php';
+    require_once 'class/App.php';
     $pdo = connect();
     // Vérification des erreurs.
     if (empty($_POST['email']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
         $errors['email']= "Votre adresse email n'est pas valide";
     } else {
         // On vérifie si l'email n'est pas déjà utilisé pour un autre compte.
-        $req = $pdo->prepare('SELECT id_user FROM users WHERE email = ?');
-        $req->execute([$_POST['email']]);
-        $user = $req -> fetch(); 
+        $db = App::getDatabase();
+        $user = $db->query('SELECT id_user FROM users WHERE email = ?', [$_POST['email']])->fetch();
+        // $req = $pdo->prepare('SELECT id_user FROM users WHERE email = ?');
+        // $req->execute([$_POST['email']]);
+        // $user = $req -> fetch(); 
         if ($user){
             $errors['email'] = 'Cet email est déjà utilisé';
         }
     }
 
-    if (empty($_POST['password']) || $_POST['password'] != $_POST['passConfirm'] ){
+    if (empty($_POST['password']) || $_POST['password'] != $_POST['passConfirm'] || strlen($_POST['password'])< 6){
         $errors['email']= "Vous devez rentrer un mot de passe valide";
     }
 
@@ -69,15 +86,15 @@ if (!empty($_POST)){
         <form action='' method='post'>
             <div class="form-group">
                 <label for="InputEmail">Email</label>
-                <input type="text" class="form-control" name='email' id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="text" class="form-control" name='email' id="InputEmail" aria-describedby="emailHelp" placeholder="Entrer votre email">
             </div>
             <div class="form-group">
                 <label for="InputPassword">Mot de passe</label>
-                <input type="password" class="form-control" name='password' id="InputPassword" placeholder="Password">
+                <input type="password" class="form-control" name='password' id="InputPassword" placeholder="Entrer votre mot de passe : 6 caracteres minimum" >
             </div>
             <div class="form-group">
                 <label for="ConfirmPassword">Confirmer votre mot de passe</label>
-                <input type="password" class="form-control" name='passConfirm' id="ConfirmPassword" placeholder="Password">
+                <input type="password" class="form-control" name='passConfirm' id="ConfirmPassword" placeholder="Confirmer votre mot de passe">
             </div>
             <div class="form-group">
 				<label for="inputservice">Sélectionner un service</label>

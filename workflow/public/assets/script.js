@@ -100,7 +100,7 @@ function template(data){
       output +=  '</div>';
       output +=  '<div class="titre-actus"><h1>' + element.title + '</h1></div>';
       output +=  '<div class="content-actus"><p>' + excerpt(element.content) + '</p></div>';
-      output +=  '<div class="btn-actu"><a href="index.php?page=post&id=' + element.id_post + '"><p>Lire plus</p></a></div>';
+      output +=  '<div class="btn-actu"><a href="index.php?page=actualites&id=' + element.id_post + '"><p>Lire plus</p></a></div>';
       output +=  '</div>';
       output +=  '</li>';
     });

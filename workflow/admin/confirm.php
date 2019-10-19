@@ -1,5 +1,9 @@
 <?php
-session_start();
+if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
+    session_start([
+        'cookie_lifetime' => 86400,
+    ]);
+}
 
 $user_id = $_GET['id'];
 

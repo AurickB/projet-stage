@@ -1,8 +1,11 @@
 <?php
-session_start(); 
+if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
+    session_start([
+        'cookie_lifetime' => 86400,
+    ]);
+}
 require_once 'inc/header.php';
 require_once 'inc/bddConfig.php';
-
 
 $pdo = connect();
 // On met dans une variable le nombre d'article que l'on veut par page.
@@ -27,7 +30,7 @@ $req = $pdo->query("SELECT * FROM posts JOIN users ON posts.id_user = users.id_u
 $posts = $req->fetchAll();
 
 require_once 'inc/functions.php';
-debug($posts);
+// debug($posts);
 
 /**
  * Disposition des articles.
