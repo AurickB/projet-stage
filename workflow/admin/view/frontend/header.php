@@ -1,10 +1,4 @@
-<?php
-if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
-    session_start([
-        'cookie_lifetime' => 86400,
-    ]);
-}
-?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,7 +12,7 @@ if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="account.php">Administation</a>
+        <a class="navbar-brand" href="index.php?page=account">Administation</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,17 +20,17 @@ if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
             <ul class="navbar-nav">
                 <?php if(isset($_SESSION['auth'])): ?>
                 <li class="nav-item">
-                <a class="nav-link" href="news.php">Articles</a>
+                <a class="nav-link" href="index.php?page=news">Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Déconnexion</a>
+                    <a class="nav-link" href="index.php?sd=1">Déconnexion</a>
                 </li>
                 <?php else: ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="register.php">S'inscrire</a>
+                    <a class="nav-link" href="index.php?page=register">S'inscrire</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Se connecter</a>
+                    <a class="nav-link" href="index.php?page=login">Se connecter</a>
                 </li>
                 <?php endif; ?>
             </ul>

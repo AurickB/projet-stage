@@ -1,16 +1,6 @@
 <?php
-if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
-    session_start([
-        'cookie_lifetime' => 86400,
-    ]);
-}
-require_once 'inc/functions.php';
-require_once 'inc/header.php';
-// On empêche l'accès à la page account.php si l'utilisateur ne s'est pas connecté avec ses identifiants.
-if(!isset($_SESSION['auth'])){
-    $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'être sur cette page. Veuillez vous connecter";
-	header('Location: login.php');
-}
+//require_once 'inc/functions.php';
+require_once 'frontend/header.php';
 
 //debug($_SESSION['auth']);
 if(isset($_SESSION['errors'])){ // Si il y a une erreurs on affiche le message.
@@ -27,7 +17,7 @@ if(isset($_SESSION['errors'])){ // Si il y a une erreurs on affiche le message.
 <?php //debug($_SESSION)?>
 
 <div class="container">
-	<form action="post_account.php" method="post" enctype="multipart/form-data" class="">
+	<form action="" method="post" enctype="multipart/form-data" class="">
 		<div class="form-group">
 			<label for="title">Titre</label>
 			<input class="form-control" id="title" type="text" name="title">
@@ -60,4 +50,4 @@ if(isset($_SESSION['success'])){
 if(isset($_SESSION['errors'])){
 	unset($_SESSION['errors']);
 }
-require 'inc/footer.php';?>
+require 'frontend/footer.php';?>

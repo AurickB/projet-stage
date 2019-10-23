@@ -1,19 +1,11 @@
 <?php
-if(session_status()==PHP_SESSION_NONE){ // La session va durer une journée
-    session_start([
-        'cookie_lifetime' => 86400,
-    ]);
-}
+require_once '/inc/bddConfig.php';
 
 $user_id = $_GET['id'];
-
 $token = $_GET['token'];
-
-require_once 'inc/bddConfig.php';
 
 $pdo = connect();
 $req = $pdo->prepare('SELECT * FROM users WHERE id_user = ?');
-// On excute la requete avec l'id de l'utilisateur en paramètre.
 $req->execute([$user_id]);
 $user = $req->fetch();
  
@@ -26,9 +18,10 @@ if($user && $user['confirmation_token'] == $token){
     $req->execute([$user_id]);
     $_SESSION['flash']['success']= 'Votre compte est confirmé';
     $_SESSION['auth'] = $user;
-    header('Location: account.php');
+    displayAccount();
     die('ok');
 } else {
+    echo 'déjà fait';
     $_SESSION['flash']['danger'] = "Ce token n'est plus valide";
-    header('Location: login.php');
+    displayLogin();
 }
