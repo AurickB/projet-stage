@@ -36,3 +36,9 @@ h1{
 .pagination{
     justify-content: center;
 }
+
+.post-header{
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}

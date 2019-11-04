@@ -14,7 +14,7 @@
         <form action='' method='post'>
             <div class="form-group">
                 <label for="InputEmail">Email</label>
-                <input type="text" class="form-control" name='email' id="InputEmail" aria-describedby="emailHelp" placeholder="Entrer votre email">
+                <input type="text" class="form-control" name='email' value="<?= isset(($_SESSION['inputs']['email'])) ? $_SESSION['inputs']['email'] : ''; ?>", id="InputEmail" aria-describedby="emailHelp" placeholder="Entrer votre email">
             </div>
             <div class="form-group">
                 <label for="InputPassword">Mot de passe</label>

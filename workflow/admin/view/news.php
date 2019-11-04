@@ -12,13 +12,17 @@ if (empty($posts)){
     echo '</br></br></br><p>aucun article, la base de données est vide...</p>';
 }
 foreach ($posts as $post){
-    // if ($post['img'] != null){
-    //     echo '<div><img src="view/images/' . $travel['img'] . '"></div></br></br>' ;
-    // }
+    if ($post['img'] != null){
+        echo '<div class="post-header" style="background-image: url(../images/' . $post['img'] . ');"></div></br></br>';
+        // echo '<div><img src="view/images/' . $post['img'] . '"></div></br></br>' ;
+    }
+    
     echo '<h2>' . $post['title'] . '</h2></br>';
     echo '<p>Publié par : ' . $post['service'] . '</p></br>';
     echo '<p>' . $post['content'] . '</p></br>';
-    echo '<a href="index.php?idpost='.$post['id_post']. '&page=delete">Supprimer article</a><br>';
+    if ($post['id_user'] == $_SESSION['auth']['id_user']){
+        echo '<a href="index.php?idpost='.$post['id_post']. '&page=delete">Supprimer article</a><br>';
+    }
     echo '<br>';
     echo '<hr>';
 }

@@ -21,26 +21,34 @@ function displayRegister(){
     require 'view/register.php';
 }
 
-function displayNews(){
-    // On met dans une variable le nombre d'article que l'on veut par page.
-    $postParPage = 3;
-    // On récupère les id de tous les article
-    $postTotalReq = selectID();
+function displayPost(){
+    // On met dans une variable le nombre d'articles que l'on souhaite afficher par page.
+    $limit = 3;
+    // On récupère les id de tous les articles
+    $postTotalReq = selectPostId();
+    // On retourne le nombre de lignes affectées par la dernière requête
     $postTotal = $postTotalReq->rowCount();
     // On compte le nombre de page total.
-    $pageTotale = ceil($postTotal/$postParPage);
-
+    $pageTotale = ceil($postTotal/$limit);
     if (isset($_GET['page']) && !empty($_GET['page']) && $_GET['page'] > 0 && $_GET['page'] <= $pageTotale){
         $_GET['page']=intval($_GET['page']); // On empêcher l'injection de caractère.
-        $pageActuelle = $_GET['page'];
+        $page = $_GET['page'];
     } else {
-        $pageActuelle = 1;
+        $page = 1;
     }
-
-    $limit = ($pageActuelle-1)*$postParPage;
-    $posts = getNew($limit, $postParPage);
-    
+    // On calcul le numéro du premier élément à appeler
+    $start = ($page-1)*$limit;
+    // La variable $posts récupère en valeur le tableau contenant toutes les lignes de la base de données
+    $posts = getPost($start, $limit);
     require 'view/news.php';
+}
+
+function displayForget(){
+    require 'view/forget.php';
+}
+
+function displayReset(){
+    require 'view/reset.php';
 }
 
 function displayPage(){
@@ -50,7 +58,7 @@ function displayPage(){
             displayAccount();
             break;
         case 'news':
-            displayNews();
+            displayPost();
             break; 
         case 'register':
             displayRegister();
@@ -58,8 +66,11 @@ function displayPage(){
         case 'login':
             displayLogin();
             break; 
+        case 'forget':
+            displayForget();
+            break;
         case  $page > 0:
-            displayNews();
+            displayPost();
             break;   
         default:
             displayAccount();

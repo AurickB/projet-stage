@@ -57,6 +57,8 @@ h1 {
     padding: 40px 0 40px 0;
     font-weight: 300;
     color: #233548;
+    word-wrap: break-word; 
+    hyphens: auto;
 }
 
 h2{
@@ -69,6 +71,9 @@ p{
     margin-bottom: 10px;
     padding: 10px;
     font-size: 1.1rem;
+    line-height: 170%;
+    word-wrap: break-word; 
+    hyphens: auto;
 }
 
 .hidden{

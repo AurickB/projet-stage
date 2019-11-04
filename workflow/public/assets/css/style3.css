@@ -118,6 +118,35 @@
 #actualite p{
     padding: 10px 0 10px 0;
 }
+#actualite .post-header{
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+#actualite .post-header-full{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+#actualite .post-header-full .date-actus{
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+    color: #f2f2f2;
+}
+
+#actualite .post-header-full h1{
+    color: #f2f2f2;
+    text-align: center;
+    width: 100%;
+    top: 5%;
+    font-size: 3.65rem;
+    font-weight: bold;
+}
 
 #actualite .zone-actu{
     padding-top: 37px;
@@ -132,7 +161,8 @@
 
 #actualite .update-actu p{
     text-transform: uppercase;
-    font-size: 0.68rem;
+    font-size: 0.88rem;
+    text-align: justify;
 }
 
 #actualite .btn-actu{
@@ -158,7 +188,7 @@
 #actualite .btn-actu a:focus{
     background-color: #233548;
     border-color: #233548;
-    color: white;
+    color: #f2f2f2;
 } 
 
 #page {

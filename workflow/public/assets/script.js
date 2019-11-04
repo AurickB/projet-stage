@@ -92,6 +92,9 @@ function template(data){
     output += '<p style="height: 163px;">à venir...</p>';
   } else {
     data.forEach( element => { // ...sinon
+      if (element.img){
+        output += '<div class="post-header" style="background-image: url(../images/' + element.img + ');"></div>';
+      }
       output +=  '<li class="">';
       output +=  '<div class="zone-actu">';
       output +=  '<div class="update-actu">';
