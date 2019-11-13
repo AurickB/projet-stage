@@ -22,7 +22,7 @@ if (isset($_GET['sd'])){
     $id = $_GET['id'];
     $reset_token = $_GET['token'];
     resetPassword($id ,$reset_token);
-} else if (isset($_POST['email']) && $_GET['page'] == 'forget'){
+} else if (isset($_POST['email']) && isset($_GET['page']) && $_GET['page'] == 'forget'){
     require_once 'controller/backendController.php';
     forget();
 } else if (isset($_POST['title']) && isset($_POST['content'])){

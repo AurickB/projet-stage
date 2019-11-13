@@ -10,7 +10,7 @@ function login(){
         if(password_verify($_POST['password'],$user['password'])){
             $_SESSION['auth'] = $user;
             $_SESSION['flash']['success'] = "Vous êtes bien connecté";
-            if ($_POST['remember']){
+            if (isset($_POST['remember'])){
                 $remember_token = str_random(250);
                 remember($user['id_user'], $remember_token);
                 setcookie('remember', $user['id_user'] . '==' . $remember_token . sha1($user['id_user'] . 'totolelapin'), time() + 60 * 60 * 24 * 7);
@@ -34,9 +34,6 @@ function addPost(){
     if(!isset($_POST['content']) || $_POST['content'] == ''){
         $errors['content'] = 'Vous n\'avez pas renseigné de contenu';
     }
-    if(!isset($_POST['img'])){
-        $errors['img'] = 'Vous n\'avez pas renseigné d\'image';
-    }
     if (!empty($errors)){
         // On envoie le tableau qui contient les erreurs.
         $_SESSION['errors'] = $errors;
@@ -44,32 +41,39 @@ function addPost(){
         $_SESSION['inputs'] = $_POST;
         displayAccount();
         exit();
-    } else if (isset($_POST['envoi_form']) 
-        && $_POST['randomformOK']==$_SESSION['randomOk']){ // On envoie les données récupérées dans le formulaire dans la base de données avec une technique pour empêcher le renvoi du formulaire par actualisation de la page.
+    } else if (isset($_POST['envoi_form']) || isset($_SESSION['randomOk']) 
+    && $_POST['randomformOK']==$_SESSION['randomOk']){ // On envoie les données récupérées dans le formulaire dans la base de données avec une technique pour empêcher le renvoi du formulaire par actualisation de la page.
         if (isset($_FILES['img']['name']) && !empty($_FILES['img']['name'])){
+            if ($_FILES['img']['size'] < 10000000){
+            //debug($_FILES['img']['size']);
             $filedir = '../images/';
             $path = pathinfo($_FILES['img']['name']);
             $ext = $path['extension'];
             $img = $path['filename'].uniqid().'.'.$ext;                
-            if(in_array($ext, ['png','jpg','jpeg'])){
+                if(in_array($ext, ['png','jpg','jpeg'])){
                 move_uploaded_file( $_FILES['img']['tmp_name'], $filedir.$img);
+                }
+            } else {
+                $_SESSION['flash']['danger'] = "Votre photo ne respect pas la taille maximale";
             }
         } else {
             $img = null;
         }
-        $id_user = $_SESSION['auth']['id_user'];
-        $post = [$id_user, $img];
-        setPost($post);
-        $_SESSION['flash']['success'] = "L'article a bien été créé avec succès";	
-        $_SESSION['randomOk'] = rand(1,100);
-        unset($_POST);
-        /**
-         * $_SESSION['randomOk'] contient un nombre aléatoire.
-         * Il est mis dans un input hidden du formulaire => il sera alors récupéré via $_POST['randomformOK'].
-         * Si on recharge la page $_SESSION['randomOk'] est modifié mais $_POST['randomformOK'] non.
-         */
-        displayPost();
-        exit();
+        if ($img != null){
+            $id_user = $_SESSION['auth']['id_user'];
+            $post = [$id_user, $img];
+            setPost($post);
+            $_SESSION['flash']['success'] = "L'article a bien été créé avec succès";	
+            $_SESSION['randomOk'] = rand(1,100);
+            unset($_POST);
+            /**
+             * $_SESSION['randomOk'] contient un nombre aléatoire.
+             * Il est mis dans un input hidden du formulaire => il sera alors récupéré via $_POST['randomformOK'].
+             * Si on recharge la page $_SESSION['randomOk'] est modifié mais $_POST['randomformOK'] non.
+             */
+            displayPost();
+            exit();
+        }
     }
     displayPost();
 }
@@ -77,7 +81,7 @@ function addPost(){
 // fonction qui appelle la fonction deletePost() en fonction de l'id de l'article et renvoie sur la page news.php après suppression du post.
 function removePost($id){
     $post = selectPostIdForDelete($id);
-    debug($post);
+    //debug($post);
     deletePost($id);
     unlink('../images/'. $post['img'] .'');
     $_SESSION['flash']['success']= 'Votre article a bien été supprimé';
@@ -134,16 +138,22 @@ function confirm($user_id ,$token){
 }
 
 function forget(){
-    if (!empty($_POST) && !empty($_POST['email'])){
+    if (!empty($_POST) && !empty($_POST['email'])){ // Si l'utilisateur a remplit le formulaire...
+        /**
+         * On appelle la fonction getUser() qui prend en paramètre l'email de l'utilisateur 
+         * Si l'email est présent dans la base de données la fonction renvoie une à une les lignes de la requête.
+         * Puis on attribut à la variable $user la valeur retournée par la fonction getUser().
+         */
         $user = getUser($_POST['email']);
-    } if ($user){
+    } if ($user){ // Si $user existe...
+        $id = $user["id_user"];
         $reset_token = str_random(60);
-        $id = $user['id_user'];
+        // On appelle la fonction setPassword() qui prend en paramètre $reset_token et l'$id de l'utilisateur.
         setPassword($reset_token, $id);
         $_SESSION['flash']['success']= 'Les instructions du rappel de mot de passe vous ont été envoyé par email';
         displayLogin();
         exit();
-    } else {
+    } else { // ...Sinon
         $_SESSION['flash']['danger']= 'Aucun compte ne correspond à cet email';
         displayForget();
     }   
@@ -153,14 +163,16 @@ function resetPassword($id ,$reset_token){
     $user = getUserForReset($id ,$reset_token);
     $id = $user['id_user'];
     if ($user){
-        if (!empty($_POST['password']) || $_POST['password'] != $_POST['passConfirm']){
+        if (!empty($_POST) && !empty($_POST['password']) && !empty($_POST['passConfirm']) && $_POST['password'] == $_POST['passConfirm']){
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
             modifyPassword($password, $id);
             $_SESSION['flash']['success']= 'Votre mot de passe à bien été modifié';
             $_SESSION['auth'] = $user;
             displayAccount();
             exit();
-        } 
+        } else if ($_POST['password'] != $_POST['passConfirm']){
+            $_SESSION['flash']['danger']= 'Les mot de passe sont différents';
+        }
     } else {
         $_SESSION['flash']['danger']= 'Ce lien n\'est pas valide';
         displayLogin();

@@ -14,22 +14,23 @@ if(isset($_SESSION['errors'])){ // Si il y a une erreurs on affiche le message.
 
 <h1>Bienvenue <?= $_SESSION['auth']['email']?></h1>
 
-<?php //debug($_SESSION)?>
+<?php debug($_SESSION)?>
 
 <div class="container">
 	<form action="" method="post" enctype="multipart/form-data" class="">
 		<div class="form-group">
 			<label for="title">Titre</label>
-			<input class="form-control" id="title" type="text" name="title">
+			<input class="form-control" id="title" type="text" placeholder="250 caractères maximun" name="title">
 		</div>
 		<div class="form-group">
 			<label for="content">Contenu</label>
-			<textarea id="content" type="textarea" name="content" class="form-control"></textarea>
+			<textarea id="content" type="textarea" name="content" placeholder="8000 caractères maximun" class="form-control"></textarea>
 		</div>
 		<div class="form-group">
 			<label for="img">Image</label>
+			<small>1mo maximun - formats de fichier compatibles : 'png','jpg','jpeg'</small>
 			<div class="">
-				<input id="img" type="file" name="img" style="width : 100%;">
+				<input id="img" type="file" required="required" name="img" style="width : 100%;">
 			</div>
 		</div>
 		<button type="submit" name="envoi_form" class="btn btn-primary">Créer un article</button>

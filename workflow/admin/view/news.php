@@ -34,8 +34,8 @@ echo '</section>';
  */
 
 echo '<ul class="pagination">';
-if ($pageActuelle!=1){ // Si la page actuelle est différente de 1 on crée la variable $precedent égale à $pageActuelle-1
-    $precedent=$pageActuelle-1;
+if ($page!=1){ // Si la page actuelle est différente de 1 on crée la variable $precedent égale à $pageActuelle-1
+    $precedent=$page-1;
     echo '<li class="page-item">
     <a class="page-link" href="index.php?page='.$precedent.'" aria-disabled="true">Précédent</a>
     </li>';
@@ -43,8 +43,8 @@ if ($pageActuelle!=1){ // Si la page actuelle est différente de 1 on crée la v
 for ($i=1; $i<=$pageTotale; $i++){
     echo '<li class="page-item"><a class="page-link" href="index.php?page='.$i.'">'.'page '.$i.'</a></li>';
 }
-if ($pageActuelle<$pageTotale){ // Tant que $pageActuelle est inférieur à $pageTotal on crée la variable $suivant.
-    $suivant=$pageActuelle+1;
+if ($page<$pageTotale){ // Tant que $pageActuelle est inférieur à $pageTotal on crée la variable $suivant.
+    $suivant=$page+1;
     echo' <li class="page-item">
     <a class="page-link" href="index.php?page='.$suivant.'" >Suivant</a>
     </li>';
